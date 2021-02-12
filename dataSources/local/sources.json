@@ -1,0 +1,44 @@
+{
+  "US_CERT": {
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAACK1BMVEUAAAD////////////6+/3////////////////////////9/v65z97I2ub///////////////////+vyNnh6/Hc6O/T4erP3unE1+P///////8AUogAUIcATYQAS4OqxtgCT4azy9yTtsyErMY8msTw9fje6fCXuM6BqcQfh7hilLYThLY+fKXT4erK2+d4o79dkbQAda0qbZrF2OSQxdxztdOfvtJirc9AmsNto8JmmrtLhq1XkapIg6oAbqhDgKc7eqMrb5wla5kcZZUUYJELWY0HVosLVooIUogASYICU3j5+/zz9/nh6/GlwtWhwNR3t9SZutBYpsyKscpUpMlGoMg0lsVLn8R9p8Iskb9pm7wljrxunbsei7sigbIDe7FVjLAvg69Oh6xDfaUQc6JYkp8tcZ5km5w8e5kVbpdpn5QARX8OXGtTjlQnb1JFhzz6/P33+vvp8PXY5e3N3eiDvthsstF8ss5eqsyPs8t3rstOo8twpsRCm8Nzo8Evk79Ul716prwJgLthmLoZh7c1irUxiLRWj7Nbj7IYg7IOfrByn68Kfq5hla0AcqpSjKkAcalZkqUwfaMNeaMsfKEIbKE0daAEcqBBfp8ydJ8BaJ4vgJkRZ5kegpgqapgAXpcfZpYdY5QTdJMBXZMSWY0WWIwZcostcIUOXIQSaoMASoIFVoEVYoAARoAadn0OW3w/eno9enoAPXkAT3YAS3YTZHM5g24nfGoIWWNHOhSbAAAAGnRSTlMAHvnkqLm4eHdZIKn+9vRyb1dO/vb29vb1153dXHkAAAH0SURBVCjPTVJldxsxEDxj7LhNmnIl+dh4MTM7ZjtpmJkZyszMzMzM/PMqO4njefqgN/O0q90ZYgmiMplEXLFFXlZOlEIkpewZkiRR8v4qqWiFX7t5PBSpxkCfsyi2SbnMr2mCaaMJAJO7vjOE6JS7cpGvaoKQJnUAAA0+SYTUVFWh/moIoTq2FWBY7/QiCFFmQ76PNI6vM/G8UBf5MUOSH8hsjQo/YDCPzulYTrefO+L3nzw7HLGnzSJCUQNhlgXb6yxnvK1dPXwfzx9u3mtVEPIUJAM7Bwd7jf2eVlej0+D0hsNtw3JCgjsbrVqNmT29x+vat9vlbLwW7qiWEOK8wIEd+ob+9uZ2/iDfxfcZPFExFhDk3Nsc1OWxienpibHrwWDwasu4uFBKz1pMzL1/8wsL87OzuVzulzUuIWQpOsFw2l3M5O8/c3N/745++vrxXXdCjr+L0nodpw29ff/4+7cvJ84/nPo5GYgqiHJGHTNZzKzx4pubN269EAyXbFPHk2Zsi/T5s06NjqrVd9gGbBcEw8CVtoBdVViiXcNSADh8Qy8fjQoGW4+PXl8wS+looAAGYxl6+kAQjvoy65RLRmlr8wL12n/s9ilP96v6yqK1FVoAWmi1euTQgZEnG5UlYVABPU3jURPRYhhK4yOWyIrx+Q9PZXHitueVzQAAAABJRU5ErkJggg==",
+    "name": "US-CERT",
+    "color-dusk": "#1a6c9c",
+    "color-light": "#1a6c9c"
+  },
+  "CISCO_BLOG": {
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAY1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+aRQ2gAAAAIXRSTlMAOJ5cuIohpXYclYZDKxC1n1QVwJFvV0gKBHxlYUc7MSrE6EzBAAAAoUlEQVQoz83JRw7CMABE0XFcE/f0kMb9T4ltiYQdS5jNfOnh97P8bm4/gFR3V+RdLmSYVG41ZQguZUTNMlAO+wSnGViNiM5doNQFrsNjmVWGc4QxGM8Mal4eKBMDrg0CX0do3Rq4cS8JQQ+UUdYbIsGbFZvvjWWNpwVkugSDXyEjoDiiLNBo0SaYj67NuUmrmwKiYhMJ6JmGCGxftK8E/nQvem0G2l8h+skAAAAASUVORK5CYII=",
+    "name": "Cisco Security",
+    "color-dusk": "#1c6d4f",
+    "color-light": "#1c6d4f"
+  },
+  "CISCO_DEVNET": {
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAY1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+aRQ2gAAAAIXRSTlMAOJ5cuIohpXYclYZDKxC1n1QVwJFvV0gKBHxlYUc7MSrE6EzBAAAAoUlEQVQoz83JRw7CMABE0XFcE/f0kMb9T4ltiYQdS5jNfOnh97P8bm4/gFR3V+RdLmSYVG41ZQguZUTNMlAO+wSnGViNiM5doNQFrsNjmVWGc4QxGM8Mal4eKBMDrg0CX0do3Rq4cS8JQQ+UUdYbIsGbFZvvjWWNpwVkugSDXyEjoDiiLNBo0SaYj67NuUmrmwKiYhMJ6JmGCGxftK8E/nQvem0G2l8h+skAAAAASUVORK5CYII=",
+    "name": "Cisco DevNet",
+    "color-dusk": "#1c6d4f",
+    "color-light": "#1c6d4f"
+  },
+  "SECUREX_ORCHESTRATION": {
+    "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAWlBMVEUAAAD\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/9ZMre9AAAAHXRSTlMAG+\/ZCjO83MId3TU3DOXKrlMvJPrMxpqSRhEPAfi9704AAACKSURBVCjPlc7JEoIwEEXRG4YwKIPgrPn\/3xSkUq\/ssLGX9yz6MfnRYa64P8GHkDvTfbi8GEMU9SV5XCtRz47QVJvYLrEd3CbqBzDyVjdyOm9dkkdRR1It0sGeNCRX1Ovf8v9eDm6\/Z+uftDNogXqyTT1K+5UudiPqRm6x\/0rNVR1JP\/Po8wmM+JkP7pkQIXSo674AAAAASUVORK5CYII=",
+    "name": "SecureX Orchestration",
+    "color-dusk": "#1c6d4f",
+    "color-light": "#1c6d4f"
+  },
+  "SECUREX_CHROME_EXTENSION": {
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAACglBMVEUAAADiZlzswUYeo2LfWE70wz7gXVPrvD0bllnouTwbklbkc2odjlXja2sVnlvcTUHfWE3+zUH/zkJUnEzdVUn/00LeVkv8ykH/z0UeoGAlpmf4yD4AhVH3xkD/zUsenF0Tllcuqm7ohErxwT4bmFsYllcIyoLgXVPhZlvwwD/9zFI7r3Ybklfaa2DiaF/hZVvhcmjbZlzjtTwajVPjcWjhtDtMtoEejlaLl3j/zkP/zUFMjfZKi/UaomAVoFwXoF7/0ULdTkHdTEDdT0Mdo2LeU0cWo149g/Ufo2IYoV/eUUXSTT8we/YpdvQZpmITn1sKnFbeVUkAkkX/z0H+yUH/xD7dcjz/xyb+//86f/c/g/X/z0TXUUT/1EP/3UHcPkHcSDrbRTjZMiXh/P/68//Z6f+56f/U1v+qzv+ayP9Di/o+hvoYa/T/8pz/qI9DtHUBum0NrGYSo10BjlTVTUHZOT/cSj7KSjz/yjv+zTr/0DnWMTn+xDjbQjXbOSzYZiXSMyXm//++7///6v/R4v+o4v+m3v/CzP+3x/+wxv+Vv/////seb/UUaPL//+b//9/199/q+N3L6d3/59T//87/382j36ij3abypYtrxYpjuYZ/toP/j4D/5H//4HiFsG/ukG3vgW0JtGwGtGvt0WgXrGjndmQ1ll/jZlhMh1f4xlUAhFMShVIAfVLdYVLtwlErkFEAnU+drE3Du0oAlUoAeEr3zEhunUhnbUfZUkb/30P/1kGTWUHbO0EAkEAShD+rTDz0wzv5yTrtvjrhdToBbDrhPDXaQTPXPzP/wDLrMjHibzC4sC/WMS/cLir/yijuxSjINyhwSyb9uCLjqxjIHRWyUTC1AAAAOXRSTlMAdCPy2bmxfntlWyIeF/r38vLx7u7u7ePi393d3MPAubm3r6uopqGhm4WCdnNqXVtWTy0qHhsYEw/f71jXAAAB5ElEQVQoz02NZXvaYBRAL1RXmbu7uyc0IYEkhAaHrRSHdu0qq7vP3d3d3d3drf0/ve9TeMr5eM4ViJKuSk4cOjgxWZUO8WROt+sIdaEQP21xr5/fX8eL2dl6vZ7nQ6395sb8nBreLsaCThcOq3r8gvqap2JcqAu3ziN+ef0XxSeKdr4tEokEg8GXtbXNzZkYpj75pig+e9vns2VlZ9rbVyIfvk8EWHqx8s0nxddx5WBeQUHegdud79++a2xqUsMsbcXVn0rHre2bik2mkiL3tf8rkJaZMEFrOffi19/9G3d4NBpPadHury0ul6thLIxk5POXuy6tLfZoEEPuqlM5FEXRwyFBluWKfyfWmYjPyjKvXpPj9VLUQEgQBLny9ZENJrQICbhADYARDJa7x9eXGEjBUyfJKW4YjLMIgmC17dlcakC/c9uuhkYSxkCqhWEY4UG5e4vBbM7d6r7w20vRNDcDMoyMEZOjfG9+YWH+vtN/OFxwUmqAyRYjwjhsRw8fOvbwRwA97U8CgGVaSYswNofj1cfHz4h30ksASZMkFgvLStU3Hj0nnusDQJiNhWC9eS9A42MuBaKk9ZVYK8tW3/FztNPvwvkYGVOsVVW26/cDHEdPUkM8i1LHjx40ZFRSysKo6AYXQaP3G0/3uwAAAABJRU5ErkJggg==",
+    "name": "SecureX Chrome Extension",
+    "color-dusk": "#5f4091",
+    "color-light": "#5f4091"
+  },
+  "SECUREX_FIREFOX_ADD_ON": {
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAADAFBMVEUAAADkcU3EB2+9BHbKC2e0AID/xQLDCXD/9gf/5TL7IjL/rh7dHkH2ITj9JS/aFFbHCmsKTtECi/26AnkDgP//thXuHkD/KCv/rgL//SPNGk7/5yX/uyMDePwCiv/kQzP/1y7/mgPYMDlUr5j0IEbjGUv7KyoPMqXMDGUDavS9BHb/sgjkHUr/zQP+eA3/axX/aw+3AXzKC2bQDmHdGUsMQMLZFFePIVoDWuCyAIL7Min/3Df/1gr/gQb9WhbyHT3/vgO7A3j/1jT/hQL/LCn/Jyr/rwL/ZA//qQICgv/8IjL/Qx7/dAr/mgP/kAP/uQL/ggIChf//92D/70//7EnmGUnqHUT2ITb8IzH/MyX/NyT/QCH+VBn/XRX/tAP/pAL/nwIEZ/8Bk/4BkP0HefUDaO8WAKH/71vYElndFlHjGEz/6UfwHz35ITb/2TL/JS3pSyX/RSD/PSD/Txv/+xn7YRj/Whb/aQf/fQb/egb/1QP80QP/jQICi/8De/8Eav8Anv0FS/wDfPsFifgDcvUESPMDX+cEWeEEEtYEIM0PQ8wPAJTHCWtsK17/8F3/6k3/4EP/6D/uHj7/3jv/2Tr/7Tf+IzD/9yj/yiD/Rx/+RxL//QT/wwT/4wP/zAP/uwL/lgL/kwL/iwL/igIDc/8EXv8FVv8FPu4EM+QEON4GV9sEM9YLT9QydsoUM8UUecQkocMXPsMXSsEDC8ARXrtMi7ofPrdTiKozW6VRa6I1Q6FFe6BjfJ42L5gwLZYkH5Y2Wo46C345M31ybXJILXJtVHCAf29RN2x2KGt/s2ZxTmXRDmGY01+qYl+OsV51NFj/6FX/5E2Uyk2rc0y/Q0uSP0mwkEbBTUaRgkCwhT+ieD7BbD3hITzHkTWlYTW+pzLYWzLEqDH/8DDqMS/Q3y6vbC7/6CzCTyvJYSrdNynwOijN3CTncCT/qyDdXSD1XB/3RB//4R7/1hfpZhb/uRT/bw7/bA7/VA7xhgj/iAfpsAbnrQX/8gT/7wT/7QT/YQGKpME6AAAARHRSTlMABvHEvCspEPnz7+7o6Ofl4dzY2NfRz87OysjFw8G+vru1s7KpoZ2ZlpWVlI2HhnZ2c3FvbGZbVlFPTEs8MykkHx0UDj46vakAAAITSURBVCjPYkADHI8YkXggtoWmrIiQnHJJkKSDM1TYXoWBwVRwWX1KYHLSmZK+IE4JqIROrrn6xtadd7d7JjU8mR4cHDRRFyIhdedxwYPbC66lBCY1vC5JB8pMZQNL8LgWfS9f7Fe/xDM5+dLsvpCQkHRpkLhJrkt02Ve/gLN7tjbXbvgzPT0kO7vfhoGBPdTLxbvMZ0HF/xrf5lrPk7OnXsie2K/AwGAMlCiM9VnoV355bV1gYN25v88uTpg82YlBIwyoI7bS1/9wY2JKk6dn4v25HydMybNmYAkFSbi/uLWjtS21paUpcff86k9T8mQYBEJzXbwLZp3o2LZpTXtbaurS9f5x82bkvQWMgTkr3LXo1ax3+zo7V69cvqq9cUt13Pw5M7gZtDJy8iOLigN+nDp68+Gxrq4VB+b6x/l/EWUwPB0W4RIdU1rj5l9V9XvXuo4b/9zc3OK0GVh7gGZFxby/cv3N0+P7924+VD3Pw8PDDRgowhmTprlEuz8/2N2dlpZ25FeVR3y8hyIwSCyBWvIjC8s/X+3tPX/PbU58QoLHT31QYDFnhHm5Rs50rwhYlOAW7+vrm+BXaguSYGfKzIlwjZoZ4+5TEbC4xm/hIh89SISwgmUivYvL3L/5VAZUuhvA4tyRJXNSRL5LVGFxTGxpgbwdAwIY8YeFT3N1iYr+8FIJNdkwmqmK8XLxiatZQQUAHS3QU3z2md0AAAAASUVORK5CYII=",
+    "name": "SecureX Firefox Add-On",
+    "color-dusk": "#5f4091",
+    "color-light": "#5f4091"
+  },
+  "SECUREX_WEBINARS_AND_TRAINING": {
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAPFBMVEUAAAD////////////////////////////////////////////////////////////////////////////YSWgTAAAAE3RSTlMAnPnsxK51cxvz46WQd1E/NwwGXc+MWQAAAHNJREFUKM+t0UkOgCAQRNFGZHAe6v53VYgGiEWiiX/7UulFSwtaK6h0gpDegdXaMphxNhNQARSBIcDwZeECOAK+ARpPQAxghMAaFusDvEJM+QJ21+Gqc3sGI7LGG3j1R/3ftljT98YumxRN6exUgE6gJXYAavwR9egJckYAAAAASUVORK5CYII=",
+    "name": "SecureX Webinars & Training",
+    "color-dusk": "#5f4091",
+    "color-light": "#5f4091"
+  }
+}

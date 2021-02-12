@@ -1,0 +1,8 @@
+{
+  "env": {
+    "jest/globals": true,
+    "node": true
+  },
+  "extends": ["standard"],
+  "plugins": ["jest"]
+}

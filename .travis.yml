@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - 13
+cache:
+  npm: true
+  directories:
+    - "~/.npm"
+install:
+  - npm ci --prefer-offline
+script:
+  - npm test
+  - bash scripts/build-tar.sh
+  - bash scripts/build.sh
+after_success:
+  - npm run upload-coverage
