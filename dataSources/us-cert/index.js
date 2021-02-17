@@ -2,9 +2,6 @@ const Parser = require("rss-parser");
 
 const stripFirstLine = (html) => html.slice(html.indexOf("\n"));
 
-const convertDate = (dateString) =>
-  new Date(Date.parse(dateString)).toISOString();
-
 /**
  * Fetch RSS from US CERT Current Activity and convert to JSON.
  * @return {Object}
@@ -19,7 +16,7 @@ exports.getNews = async () => {
     return rawNews.items.map((x) => ({
       title: x.title,
       link: x.link,
-      date: convertDate(x.pubDate),
+      date: x.isoDate,
       summary: stripFirstLine(x.contentSnippet).substr(0, 500) + "...",
       sourceId: "US_CERT",
     }));

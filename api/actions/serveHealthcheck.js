@@ -24,6 +24,15 @@ const healthchecks = {
       throw new Error("response status: " + response.status);
     }
   },
+  "https://feeds.feedburner.com/": async () => {
+    const response = await fetch(
+      new URL("https://feeds.feedburner.com/CiscoBlogSecurity")
+    );
+
+    if (!response.ok) {
+      throw new Error("response status: " + response.status);
+    }
+  },
 };
 
 async function runHealthchecks() {
