@@ -15,6 +15,15 @@ const healthchecks = {
       throw new Error("response status: " + response.status);
     }
   },
+  "https://us-cert.cisa.gov/": async () => {
+    const response = await fetch(
+      new URL("https://us-cert.cisa.gov/ncas/current-activity.xml")
+    );
+
+    if (!response.ok) {
+      throw new Error("response status: " + response.status);
+    }
+  },
 };
 
 async function runHealthchecks() {

@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "creator": "CISA",
+      "title": "North Korean Malicious Cyber Activity: AppleJeus",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/17/north-korean-malicious-cyber-activity-applejeus",
+      "pubDate": "Wed, 17 Feb 2021 16:00:00 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 17, 2021<br/><p>CISA, the Federal Bureau of Investigation, and the Department of the Treasury have released a Joint Cybersecurity Advisory and seven Malware Analysis Reports (MARs) on the North Korean government’s dissemination of malware that facilitates the theft of cryptocurrency—referred to by the U.S. Government as “AppleJeus.”</p>\n\n<p>The U.S. Government refers to malicious cyber activity by the North Korean government as HIDDEN COBRA.</p>\n\n<p>CISA encourages users and administrators to review the following resources for more information.</p>\n\n<ul>\n\t<li><a href=\"https://us-cert.gov/ncas/alerts/aa21-048a\">Joint Cybersecurity Advisory: AppleJeus: Analysis of North Korea’s Cryptocurrency Malware</a></li>\n\t<li><a href=\"https://us-cert.cisa.gov/ncas/analysis-reports/ar21-048a\">MAR-10322463-1.v1: AppleJeus – Celas Trade&nbsp;Pro</a></li>\n\t<li><a href=\"https://us-cert.cisa.gov/ncas/analysis-reports/ar21-048b\">MAR-10322463-2.v1: AppleJeus – JMT Trading</a></li>\n\t<li><a href=\"https://us-cert.cisa.gov/ncas/analysis-reports/ar21-048c\">MAR-10322463-3.v1: AppleJeus – Union Crypto</a></li>\n\t<li><a href=\"https://us-cert.cisa.gov/ncas/analysis-reports/ar21-048d\">MAR-10322463-4.v1: AppleJeus – Kupay Wallet</a></li>\n\t<li><a href=\"https://us-cert.cisa.gov/ncas/analysis-reports/ar21-048e\">MAR-10322463-5.v1: AppleJeus – CoinGoTrade</a></li>\n\t<li><a href=\"https://us-cert.cisa.gov/ncas/analysis-reports/ar21-048f\">MAR-10322463-6.v1: AppleJeus – Dorusio</a></li>\n\t<li><a href=\"https://us-cert.cisa.gov/ncas/analysis-reports/ar21-048g\">MAR-10322463-7.v1: AppleJeus – Ants2Whale</a></li>\n\t<li><a href=\"https://us-cert.cisa.gov/northkorea\">North Korean Malicious Cyber Activity page</a></li>\n</ul>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 17, 2021\nCISA, the Federal Bureau of Investigation, and the Department of the Treasury have released a Joint Cybersecurity Advisory and seven Malware Analysis Reports (MARs) on the North Korean government’s dissemination of malware that facilitates the theft of cryptocurrency—referred to by the U.S. Government as “AppleJeus.”\nThe U.S. Government refers to malicious cyber activity by the North Korean government as HIDDEN COBRA.\nCISA encourages users and administrators to review the following resources for more information.\nJoint Cybersecurity Advisory: AppleJeus: Analysis of North Korea’s Cryptocurrency Malware\nMAR-10322463-1.v1: AppleJeus – Celas Trade Pro\nMAR-10322463-2.v1: AppleJeus – JMT Trading\nMAR-10322463-3.v1: AppleJeus – Union Crypto\nMAR-10322463-4.v1: AppleJeus – Kupay Wallet\nMAR-10322463-5.v1: AppleJeus – CoinGoTrade\nMAR-10322463-6.v1: AppleJeus – Dorusio\nMAR-10322463-7.v1: AppleJeus – Ants2Whale\nNorth Korean Malicious Cyber Activity page\nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16203 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-17T16:00:00.000Z"
+    },
+    {
+      "creator": "CISA",
+      "title": "VMware Releases Security Update",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/12/vmware-releases-security-update",
+      "pubDate": "Fri, 12 Feb 2021 15:24:05 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 12, 2021<br/><p>VMware has released a security update to address a vulnerability in vSphere Replication. An attacker could exploit this vulnerability to take control of an affected system.</p>\n\n<p>CISA encourages users and administrators to review VMware Security Advisory <a href=\"https://www.vmware.com/security/advisories/VMSA-2021-0001.html\">VMSA-2021-0001</a> and apply the necessary update.</p>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 12, 2021\nVMware has released a security update to address a vulnerability in vSphere Replication. An attacker could exploit this vulnerability to take control of an affected system.\nCISA encourages users and administrators to review VMware Security Advisory VMSA-2021-0001 and apply the necessary update.\nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16164 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-12T15:24:05.000Z"
+    },
+    {
+      "creator": "CISA",
+      "title": "Compromise of U.S. Water Treatment Facility",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/11/compromise-us-water-treatment-facility",
+      "pubDate": "Thu, 11 Feb 2021 21:16:13 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 11, 2021<br/><p>In response to recent events where unidentified cyber actors obtained unauthorized access to the supervisory control and data acquisition (SCADA) system at a U.S. drinking water treatment facility, CISA, the Federal Bureau of Investigation, the Environmental Protection Agency, and the Multi-State Information Sharing and Analysis Center have released joint Cybersecurity Advisory <a href=\"https://us-cert.cisa.gov/ncas/alerts/aa21-042a\">AA21-042A: Compromise of U.S. Water Treatment Facility</a>.&nbsp;This advisory outlines how cyber criminals exploit desktop sharing software and end-of-life operating systems to gain unauthorized access to systems.</p>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 11, 2021\nIn response to recent events where unidentified cyber actors obtained unauthorized access to the supervisory control and data acquisition (SCADA) system at a U.S. drinking water treatment facility, CISA, the Federal Bureau of Investigation, the Environmental Protection Agency, and the Multi-State Information Sharing and Analysis Center have released joint Cybersecurity Advisory AA21-042A: Compromise of U.S. Water Treatment Facility. This advisory outlines how cyber criminals exploit desktop sharing software and end-of-life operating systems to gain unauthorized access to systems.\nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16161 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-11T21:16:13.000Z"
+    },
+    {
+      "creator": "CISA",
+      "title": "Verify Your Valentine",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/11/verify-your-valentine",
+      "pubDate": "Thu, 11 Feb 2021 12:23:53 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 11, 2021<br/><p>This Valentine’s Day, before you go looking for love in all the wrong chat rooms, CISA reminds users to be wary of internet romance scams. At first, cyber criminals promise the reward of romance after adopting an alias to appear as a potential partner. Once your heart is hooked on hope, they turn the tables. The scammer with the illusive identity will ask for money, making promises of phony matrimony, as they finagle funds from you as a fake fiancée.</p>\n\n<p>If you don’t know who you are doting on when you are dating, be cautious with your cash and keep it.&nbsp;&nbsp; &nbsp;</p>\n\n<p>For more information, review CISA’s Tip on <a href=\"https://us-cert.cisa.gov/ncas/tips/ST06-003\">Staying Safe on Social Networking Sites</a>. If you believe you have been a victim of a romance scam, file a report with:</p>\n\n<ul>\n\t<li>the online dating site,</li>\n\t<li>the <a href=\"https://ReportFraud.ftc.gov/#\">Federal Trade Commission</a>, and</li>\n\t<li>the Federal Bureau of Investigation's <a href=\"https://www.ic3.gov/default.aspx\">Internet Crime Complaint Center</a>.</li>\n</ul>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 11, 2021\nThis Valentine’s Day, before you go looking for love in all the wrong chat rooms, CISA reminds users to be wary of internet romance scams. At first, cyber criminals promise the reward of romance after adopting an alias to appear as a potential partner. Once your heart is hooked on hope, they turn the tables. The scammer with the illusive identity will ask for money, making promises of phony matrimony, as they finagle funds from you as a fake fiancée.\nIf you don’t know who you are doting on when you are dating, be cautious with your cash and keep it.    \nFor more information, review CISA’s Tip on Staying Safe on Social Networking Sites. If you believe you have been a victim of a romance scam, file a report with:\nthe online dating site,\nthe Federal Trade Commission, and\nthe Federal Bureau of Investigation's Internet Crime Complaint Center.\nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16146 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-11T12:23:53.000Z"
+    },
+    {
+      "creator": "CISA",
+      "title": "Microsoft Launches Phase 2 Mitigation for Netlogon Remote Code Execution Vulnerability (CVE-2020-1472) ",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/10/microsoft-launches-phase-2-mitigation-netlogon-remote-code",
+      "pubDate": "Wed, 10 Feb 2021 20:12:54 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 10, 2021<br/><p>Microsoft addressed a critical remote code execution vulnerability affecting the Netlogon protocol (CVE-2020-1472) on August 11, 2020. Beginning with the February 9, 2021 Security Update release, Domain Controllers will be placed in enforcement mode. This will require all Windows and non-Windows devices to use secure Remote Procedure Call (RPC) with Netlogon secure channel or to explicitly allow the account by adding an exception for any non-compliant device.</p>\n\n<p>CISA encourages users and administrators to review the Microsoft <a href=\"https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2020-1472\">security update</a> and apply the necessary updates.</p>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 10, 2021\nMicrosoft addressed a critical remote code execution vulnerability affecting the Netlogon protocol (CVE-2020-1472) on August 11, 2020. Beginning with the February 9, 2021 Security Update release, Domain Controllers will be placed in enforcement mode. This will require all Windows and non-Windows devices to use secure Remote Procedure Call (RPC) with Netlogon secure channel or to explicitly allow the account by adding an exception for any non-compliant device.\nCISA encourages users and administrators to review the Microsoft security update and apply the necessary updates.\nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16143 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-10T20:12:54.000Z"
+    },
+    {
+      "creator": "CISA",
+      "title": "Microsoft Releases February 2021 Security Updates ",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/09/microsoft-releases-february-2021-security-updates",
+      "pubDate": "Tue, 09 Feb 2021 22:48:28 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 9, 2021<br/><p>Microsoft has released updates to address multiple vulnerabilities in Microsoft software. A remote attacker can exploit some of these vulnerabilities to take control of an affected system.</p>\n\n<p>CISA encourages users and administrators to review Microsoft’s February 2021 <a href=\"https://msrc.microsoft.com/update-guide/releaseNote/2021-Feb\">Security Update Summary</a> and <a href=\"https://support.microsoft.com/en-us/office/security-update-deployment-information-february-9-2021-kb20210209-58e63612-6217-07af-721d-670a11235a7f\">Deployment Information</a> and apply the necessary updates.</p>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 9, 2021\nMicrosoft has released updates to address multiple vulnerabilities in Microsoft software. A remote attacker can exploit some of these vulnerabilities to take control of an affected system.\nCISA encourages users and administrators to review Microsoft’s February 2021 Security Update Summary and Deployment Information and apply the necessary updates.\nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16140 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-09T22:48:28.000Z"
+    },
+    {
+      "creator": "CISA",
+      "title": "Apple Releases Security Updates  ",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/09/apple-releases-security-updates",
+      "pubDate": "Tue, 09 Feb 2021 21:14:21 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 9, 2021<br/><p>Apple has released security updates to address vulnerabilities in macOS Big Sur 11.2, macOS Catalina 10.15.7, and macOS Mojave 10.14.6. An attacker could exploit these vulnerabilities to take control of an affected system.&nbsp;</p>\n\n<p>CISA encourages users and administrators to review the Apple <a href=\"https://support.apple.com/en-us/HT212177 \">security update</a>&nbsp;and apply the necessary updates.&nbsp;</p>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 9, 2021\nApple has released security updates to address vulnerabilities in macOS Big Sur 11.2, macOS Catalina 10.15.7, and macOS Mojave 10.14.6. An attacker could exploit these vulnerabilities to take control of an affected system. \nCISA encourages users and administrators to review the Apple security update and apply the necessary updates. \nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16137 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-09T21:14:21.000Z"
+    },
+    {
+      "creator": "CISA",
+      "title": "Adobe Releases Security Updates ",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/09/adobe-releases-security-updates",
+      "pubDate": "Tue, 09 Feb 2021 21:02:24 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 9, 2021<br/><p>Adobe has released security updates to address vulnerabilities in multiple Adobe products. An attacker could exploit some of these vulnerabilities to take control of an affected system.</p>\n\n<p>CISA encourages users and administrators to review the following Adobe Security Bulletins and apply the necessary updates.</p>\n\n<ul>\n\t<li>Magento <a href=\"https://helpx.adobe.com/security/products/magento/apsb21-08.html \">APSB21-08</a>&nbsp;</li>\n\t<li>Acrobat and Reader <a href=\"https://helpx.adobe.com/security/products/acrobat/apsb21-09.html \">APSB21-09</a></li>\n\t<li>Photoshop <a href=\"https://helpx.adobe.com/security/products/photoshop/apsb21-10.html \">APSB21-10</a></li>\n\t<li>Animate <a href=\"https://helpx.adobe.com/security/products/animate/apsb21-11.html \">APSB21-11</a></li>\n\t<li>Illustrator <a href=\"https://helpx.adobe.com/security/products/illustrator/apsb21-12.html \">APSB21-12</a></li>\n\t<li>Dreamweaver <a href=\"https://helpx.adobe.com/security/products/dreamweaver/apsb21-13.html \">APSB21-13</a>&nbsp;</li>\n</ul>\n\n<p class=\"paragraph\" style=\"margin:0in;margin-bottom:.0001pt;vertical-align:baseline\"><o:p></o:p></p>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 9, 2021\nAdobe has released security updates to address vulnerabilities in multiple Adobe products. An attacker could exploit some of these vulnerabilities to take control of an affected system.\nCISA encourages users and administrators to review the following Adobe Security Bulletins and apply the necessary updates.\nMagento APSB21-08 \nAcrobat and Reader APSB21-09\nPhotoshop APSB21-10\nAnimate APSB21-11\nIllustrator APSB21-12\nDreamweaver APSB21-13 \n\nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16134 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-09T21:02:24.000Z"
+    },
+    {
+      "creator": "CISA",
+      "title": "Microsoft Warns of Windows Win32k Privilege Escalation",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/09/microsoft-warns-windows-win32k-privilege-escalation",
+      "pubDate": "Tue, 09 Feb 2021 18:08:31 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 9, 2021<br/><p>Microsoft has released a security advisory to address an escalation of privileges vulnerability, <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1732\">CVE-2021-1732</a>, in Microsoft Win32k. A local attacker can exploit this vulnerability to take control of an affected system. This vulnerability was detected in exploits in the wild.</p>\n\n<p>CISA encourages users and administrators to review Microsoft Advisory for CVE-2021-1732 and apply the necessary patch to Windows 10 and Windows 2019 servers.</p>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 9, 2021\nMicrosoft has released a security advisory to address an escalation of privileges vulnerability, CVE-2021-1732, in Microsoft Win32k. A local attacker can exploit this vulnerability to take control of an affected system. This vulnerability was detected in exploits in the wild.\nCISA encourages users and administrators to review Microsoft Advisory for CVE-2021-1732 and apply the necessary patch to Windows 10 and Windows 2019 servers.\nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16131 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-09T18:08:31.000Z"
+    },
+    {
+      "creator": "CISA",
+      "title": "Mozilla Releases Security Updates for Firefox and Firefox ESR ",
+      "link": "https://us-cert.cisa.gov/ncas/current-activity/2021/02/08/mozilla-releases-security-updates-firefox-and-firefox-esr",
+      "pubDate": "Mon, 08 Feb 2021 15:04:23 +0000",
+      "dc:creator": "CISA",
+      "content": "Original release date: February 8, 2021<br/><p>Mozilla has released security updates addressing a vulnerability affecting Firefox and Firefox ESR. An attacker can take advantage of this vulnerability to take control of an affected system. &nbsp;</p>\n\n<p>CISA encourages users and administrators to review the Mozilla security advisory for <a href=\"https://www.mozilla.org/en-US/security/advisories/mfsa2021-06/\">Firefox 85.0.1 and Firefox ESR 78.7.1</a> and apply the necessary updates. &nbsp;</p>\n\n            <div class=\"field field--name-body field--type-text-with-summary field--label-hidden field--item\"><p class=\"privacy-and-terms\">This product is provided subject to this <a href=\"https://us-cert.cisa.gov/privacy/notification\">Notification</a> and this <a href=\"https://www.dhs.gov/privacy-policy\">Privacy &amp; Use</a> policy.</p>\n\n\n</div>\n      ",
+      "contentSnippet": "Original release date: February 8, 2021\nMozilla has released security updates addressing a vulnerability affecting Firefox and Firefox ESR. An attacker can take advantage of this vulnerability to take control of an affected system.  \nCISA encourages users and administrators to review the Mozilla security advisory for Firefox 85.0.1 and Firefox ESR 78.7.1 and apply the necessary updates.  \nThis product is provided subject to this Notification and this Privacy & Use policy.",
+      "guid": "16098 at https://us-cert.cisa.gov",
+      "isoDate": "2021-02-08T15:04:23.000Z"
+    }
+  ],
+  "title": "CISA Current Activity",
+  "description": "A regularly updated summary of the most frequent, high-impact security incidents currently being reported to the US-CERT.",
+  "link": "https://us-cert.cisa.gov/",
+  "language": "en"
+}
