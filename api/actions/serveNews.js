@@ -5,10 +5,18 @@ const {
   getNews: getTalosNews,
   addSource: addTalosSource,
 } = require("../../dataSources/talos");
+const {
+  getNews: getUSCertNews,
+  addSource: addUSCertSource,
+} = require("../../dataSources/us-cert");
 
 async function serveNews(req, res, next) {
-  const talosNews = await getTalosNews();
-  const news = [...staticNews, ...talosNews]
+  let [talosNews, usCertNews] = await Promise.all([
+    getTalosNews(),
+    getUSCertNews(),
+  ]);
+
+  const news = [...staticNews, ...talosNews, ...usCertNews]
     .sort((a, b) => {
       return a.date > b.date ? -1 : a.date < b.date ? 1 : 0;
     })
@@ -17,6 +25,7 @@ async function serveNews(req, res, next) {
   const newsSources = [...new Set(news.map((x) => x.sourceId))];
   const sources = staticSources;
   addTalosSource(sources);
+  addUSCertSource(sources);
   Object.keys(sources).forEach((x) => {
     if (!newsSources.includes(x)) {
       delete sources[x];

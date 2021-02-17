@@ -6,11 +6,22 @@ const fetch = require("node-fetch");
 const { Response } = jest.requireActual("node-fetch");
 
 const mockTalosFixture = require("./fixtures/talos/response.json");
+const mockUSCertFixture = require("./fixtures/us-cert/response.json");
 const handler = require("../index.js");
 
-const mockParseURL = jest.fn().mockImplementation(() => mockTalosFixture);
+const mockParseURLTalos = jest.fn().mockImplementation(() => mockTalosFixture);
+const mockParseURLUSCert = jest
+  .fn()
+  .mockImplementation(() => mockUSCertFixture);
 jest.mock("rss-parser", () =>
-  jest.fn().mockImplementation(() => ({ parseURL: mockParseURL }))
+  jest.fn().mockImplementation(() => ({
+    parseURL: (source) =>
+      source.startsWith("https://blog.talosintelligence.com/")
+        ? mockParseURLTalos()
+        : source.startsWith("https://us-cert.cisa.gov/")
+        ? mockParseURLUSCert()
+        : "",
+  }))
 );
 
 describe("news service", () => {
@@ -21,10 +32,11 @@ describe("news service", () => {
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
         expect(result.items.length).toBe(10);
-        expect(Object.keys(result.sources).length).toBe(6);
+        expect(Object.keys(result.sources).length).toBe(2);
       });
 
-    expect(mockParseURL).toHaveBeenCalledTimes(1);
+    expect(mockParseURLTalos).toHaveBeenCalledTimes(1);
+    expect(mockParseURLUSCert).toHaveBeenCalledTimes(1);
   });
 
   it("serves passing healthcheck", async () => {
@@ -35,11 +47,11 @@ describe("news service", () => {
       .expect(200)
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
-        expect(Object.keys(result.checks).length).toBe(1);
+        expect(Object.keys(result.checks).length).toBe(2);
         expect(result.status).toBe("pass");
       });
 
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(2);
 
     fetch.mockReturnValue(
       Promise.resolve(
@@ -54,7 +66,7 @@ describe("news service", () => {
       .expect(200)
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
-        expect(Object.keys(result.checks).length).toBe(1);
+        expect(Object.keys(result.checks).length).toBe(2);
         expect(result.status).toBe("fail");
       });
   });
