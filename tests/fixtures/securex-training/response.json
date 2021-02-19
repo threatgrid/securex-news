@@ -1,0 +1,249 @@
+{
+  "actions": [
+    {
+      "id": "1200;a",
+      "state": "SUCCESS",
+      "returnValue": {
+        "dtNow": "2021-02-19 05:20:08",
+        "eventsToTopicsMap": {
+          "a043i00000AlE8CAAV": [
+            {
+              "Id": "0FT3i000000MFypGAG",
+              "EntityId": "a043i00000AlE8CAAV",
+              "TopicId": "0TO3i00000092erGAA",
+              "Topic": {
+                "Id": "0TO3i00000092erGAA",
+                "Name": "SecureX"
+              }
+            },
+            {
+              "Id": "0FT3i000000MFyqGAG",
+              "EntityId": "a043i00000AlE8CAAV",
+              "TopicId": "0TO3i0000008jYBGAY",
+              "Topic": {
+                "Id": "0TO3i0000008jYBGAY",
+                "Name": "Security Certifications Community"
+              }
+            }
+          ],
+          "a043i00000AlE8HAAV": [
+            {
+              "Id": "0FT3i000000MFyuGAG",
+              "EntityId": "a043i00000AlE8HAAV",
+              "TopicId": "0TO3i00000092erGAA",
+              "Topic": {
+                "Id": "0TO3i00000092erGAA",
+                "Name": "SecureX"
+              }
+            },
+            {
+              "Id": "0FT3i000000MFyvGAG",
+              "EntityId": "a043i00000AlE8HAAV",
+              "TopicId": "0TO3i0000008jYBGAY",
+              "Topic": {
+                "Id": "0TO3i0000008jYBGAY",
+                "Name": "Security Certifications Community"
+              }
+            }
+          ],
+          "a043i00000AlIZfAAN": [
+            {
+              "Id": "0FT3i000000MIgnGAG",
+              "EntityId": "a043i00000AlIZfAAN",
+              "TopicId": "0TO3i00000092erGAA",
+              "Topic": {
+                "Id": "0TO3i00000092erGAA",
+                "Name": "SecureX"
+              }
+            }
+          ],
+          "a043i00000AlIZoAAN": [
+            {
+              "Id": "0FT3i000000MIgrGAG",
+              "EntityId": "a043i00000AlIZoAAN",
+              "TopicId": "0TO3i00000092erGAA",
+              "Topic": {
+                "Id": "0TO3i00000092erGAA",
+                "Name": "SecureX"
+              }
+            }
+          ]
+        },
+        "groupIdToName": {},
+        "hasNextSet": false,
+        "hasPreviousSet": false,
+        "listSizeValue": 12,
+        "objEventList": [
+          {
+            "Id": "a043i00000AlE8CAAV",
+            "Name": "Phishing Investigation Workflow in Action - Session 1",
+            "All_Day_Event__c": false,
+            "Details__c": "<p><a href=\"http://cs.co/90011ezFL\" target=\"_blank\" style=\"font-size: 16px;\"><b>Register now<\/b><\/a><\/p><p><br><\/p><p>Ever been the victim of a phishing attack? Investigating these attacks can be confusing and time-consuming. That&#39;s why Cisco has made phishing investigations the topic of our up-coming SecureX webinar! With the new SecureX Orchestration release we have changed the game and phishing investigations will never be the same. Learn how to save hours, stop these attacks in their tracks, and minimize the damage all using SecureX!<\/p><p><br><\/p><p><i>*Event start time displayed here reflects your local browser timezone settings. Please visit the registration link for more information on event dates and times. Registration using a mobile device is not supported, please use a computer to register for the meeting instead.<\/i><\/p>",
+            "Enable_Pricing_Payment__c": false,
+            "Enable_RSVP__c": false,
+            "End_DateTime__c": "2021-02-25T15:00:00.000Z",
+            "Location_Name__c": "Webex",
+            "NetworkId__c": "0DB3i0000004DjpGAE",
+            "Number_of_Attendees__c": 0,
+            "Event_Type__c": "Security",
+            "RSVP_Count_Threshold__c": 0,
+            "Start_DateTime__c": "2021-02-25T14:00:00.000Z",
+            "Attachments": [
+              {
+                "ParentId": "a043i00000AlE8CAAV",
+                "Id": "00P3i00000LLHnZEAX",
+                "Name": "image/jpeg"
+              }
+            ]
+          },
+          {
+            "Id": "a043i00000AlE8HAAV",
+            "Name": "Phishing Investigation Workflow in Action - Session 2",
+            "All_Day_Event__c": false,
+            "Details__c": "<p><a href=\"http://cs.co/90011ezFL\" target=\"_blank\" style=\"font-size: 16px;\"><b>Register now<\/b><\/a><\/p><p><b style=\"font-size: 16px;\"><span class=\"ql-cursor\">﻿<\/span><\/b><\/p><p>Ever been the victim of a phishing attack? Investigating these attacks can be confusing and time-consuming. That&#39;s why Cisco has made phishing investigations the topic of our up-coming SecureX webinar! With the new SecureX Orchestration release we have changed the game and phishing investigations will never be the same. Learn how to save hours, stop these attacks in their tracks, and minimize the damage all using SecureX!<\/p><p><br><\/p><p><i>*Event start time displayed here reflects your local browser timezone settings. Please visit the registration link for more information on event dates and times. Registration using a mobile device is not supported, please use a computer to register for the meeting instead.<\/i><\/p>",
+            "Enable_Pricing_Payment__c": false,
+            "Enable_RSVP__c": false,
+            "End_DateTime__c": "2021-02-25T18:00:00.000Z",
+            "Location_Name__c": "Webex",
+            "NetworkId__c": "0DB3i0000004DjpGAE",
+            "Number_of_Attendees__c": 0,
+            "Event_Type__c": "Security",
+            "RSVP_Count_Threshold__c": 0,
+            "Start_DateTime__c": "2021-02-25T17:00:00.000Z",
+            "Attachments": [
+              {
+                "ParentId": "a043i00000AlE8HAAV",
+                "Id": "00P3i00000LLHn1EAH",
+                "Name": "image/jpeg"
+              }
+            ]
+          },
+          {
+            "Id": "a043i00000AlIZfAAN",
+            "Name": "Use Case Overview & Planning for SecureX (EMEAR)",
+            "All_Day_Event__c": false,
+            "Details__c": "<p><a href=\"http://cs.co/90011ezFL\" target=\"_blank\" style=\"font-family: CiscoSans-Bold, sans-serif;\"><b>Register now<\/b><\/a><\/p><p><br><\/p><p>How do you know if your environment is compatible with SecureX? (Hint, it probably is!) What can you expect to achieve with SecureX? These foundational questions as well as some demos will be covered in the webinar.<\/p><p><br><\/p><p><i>*Event start time displayed here reflects your local browser timezone settings. Please visit the registration link for more information on event dates and times. Registration using a mobile device is not supported, please use a computer to register for the meeting instead.<\/i><\/p>",
+            "Enable_Pricing_Payment__c": false,
+            "Enable_RSVP__c": false,
+            "End_DateTime__c": "2021-03-25T14:00:00.000Z",
+            "Location_Name__c": "Webex",
+            "NetworkId__c": "0DB3i0000004DjpGAE",
+            "Number_of_Attendees__c": 0,
+            "Event_Type__c": "Security",
+            "RSVP_Count_Threshold__c": 0,
+            "Start_DateTime__c": "2021-03-25T13:00:00.000Z",
+            "Attachments": [
+              {
+                "ParentId": "a043i00000AlIZfAAN",
+                "Id": "00P3i00000LM9UyEAL",
+                "Name": "image/jpeg"
+              }
+            ]
+          },
+          {
+            "Id": "a043i00000AlIZoAAN",
+            "Name": "Use Case Overview & Planning for SecureX (AMER)",
+            "All_Day_Event__c": false,
+            "Details__c": "<p><a href=\"http://cs.co/90011ezFL\" target=\"_blank\" style=\"font-family: CiscoSans-Bold, sans-serif;\"><b>Register now<\/b><\/a><\/p><p><br><\/p><p>How do you know if your environment is compatible with SecureX? (Hint, it probably is!) What can you expect to achieve with SecureX? These foundational questions as well as some demos will be covered in the webinar.<\/p><p><br><\/p><p><i>*Event start time displayed here reflects your local browser timezone settings. Please visit the registration link for more information on event dates and times. Registration using a mobile device is not supported, please use a computer to register for the meeting instead.<\/i><\/p>",
+            "Enable_Pricing_Payment__c": false,
+            "Enable_RSVP__c": false,
+            "End_DateTime__c": "2021-03-25T17:00:00.000Z",
+            "Location_Name__c": "Webex",
+            "NetworkId__c": "0DB3i0000004DjpGAE",
+            "Number_of_Attendees__c": 0,
+            "Event_Type__c": "Security",
+            "RSVP_Count_Threshold__c": 0,
+            "Start_DateTime__c": "2021-03-25T16:00:00.000Z",
+            "Attachments": [
+              {
+                "ParentId": "a043i00000AlIZoAAN",
+                "Id": "00P3i00000LM9V3EAL",
+                "Name": "image/jpeg"
+              }
+            ]
+          }
+        ],
+        "pageNumber": 1,
+        "topicNameToId": {
+          "SecureX": "0TO3i00000092erGAA",
+          "Security Certifications Community": "0TO3i0000008jYBGAY"
+        },
+        "totalPages": 1,
+        "totalResults": 4
+      },
+      "error": []
+    }
+  ],
+  "context": {
+    "mode": "PROD",
+    "app": "siteforce:communityApp",
+    "contextPath": "/s/sfsites",
+    "pathPrefix": "",
+    "fwuid": "8WYDoRiNKzw4em08r-Gg4A",
+    "mlr": 1,
+    "loaded": {
+      "APPLICATION@markup://siteforce:communityApp": "fV3Zo7mI3PLrr1VMsCPF3w"
+    },
+    "globalValueProviders": [
+      {
+        "type": "$Global",
+        "values": {
+          "eswConfigDeveloperName": {
+            "writable": true,
+            "defaultValue": ""
+          },
+          "isVoiceOver": {
+            "writable": true,
+            "defaultValue": false
+          },
+          "setupAppContextId": {
+            "writable": true,
+            "defaultValue": ""
+          },
+          "density": {
+            "writable": true,
+            "defaultValue": ""
+          },
+          "srcdoc": {
+            "writable": false,
+            "defaultValue": false
+          },
+          "appContextId": {
+            "writable": true,
+            "defaultValue": ""
+          },
+          "dynamicTypeSize": {
+            "writable": true,
+            "defaultValue": ""
+          }
+        }
+      }
+    ],
+    "enableAccessChecks": true,
+    "apce": 1,
+    "dns": "c",
+    "ls": 1,
+    "lv": "51",
+    "mna": {
+      "lightning": "interop"
+    },
+    "arse": 1,
+    "services": [
+      "markup://lightning:configProvider",
+      "markup://community_designtime:salesforceScopedModuleResolver",
+      "markup://instrumentation:locatorService"
+    ]
+  },
+  "perfSummary": {
+    "version": "core",
+    "request": 354,
+    "actions": {
+      "1200;a": {
+        "total": 248,
+        "db": 46
+      }
+    },
+    "actionsTotal": 248,
+    "overhead": 0
+  }
+}

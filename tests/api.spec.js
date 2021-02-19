@@ -1,4 +1,15 @@
-jest.mock("node-fetch");
+jest.mock("node-fetch", () => {
+  return jest.fn((url) => {
+    const responseBody = url.startsWith("https://learningnetwork.cisco.com/")
+      ? mockParseURLSecureXTraining()
+      : "";
+
+    return Promise.resolve({
+      ok: true,
+      json: () => responseBody,
+    });
+  });
+});
 
 const request = require("supertest");
 const Parser = require("rss-parser");
@@ -8,7 +19,9 @@ const { Response } = jest.requireActual("node-fetch");
 const mockTalosFixture = require("./fixtures/talos/response.json");
 const mockUSCertFixture = require("./fixtures/us-cert/response.json");
 const mockCiscoBlogFixture = require("./fixtures/cisco-blog/response.json");
+const mockSecureXTrainingFixture = require("./fixtures/securex-training/response.json");
 const handler = require("../index.js");
+const { response } = require("express");
 
 const mockParseURLTalos = jest.fn().mockImplementation(() => mockTalosFixture);
 const mockParseURLUSCert = jest
@@ -17,6 +30,9 @@ const mockParseURLUSCert = jest
 const mockParseURLCiscoBlog = jest
   .fn()
   .mockImplementation(() => mockCiscoBlogFixture);
+const mockParseURLSecureXTraining = jest
+  .fn()
+  .mockImplementation(() => mockSecureXTrainingFixture);
 jest.mock("rss-parser", () =>
   jest.fn().mockImplementation(() => ({
     parseURL: (source) =>
@@ -38,12 +54,13 @@ describe("news service", () => {
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
         expect(result.items.length).toBe(10);
-        expect(Object.keys(result.sources).length).toBe(3);
+        expect(Object.keys(result.sources).length).toBe(4);
       });
 
     expect(mockParseURLTalos).toHaveBeenCalledTimes(1);
     expect(mockParseURLUSCert).toHaveBeenCalledTimes(1);
     expect(mockParseURLCiscoBlog).toHaveBeenCalledTimes(1);
+    expect(mockParseURLSecureXTraining).toHaveBeenCalledTimes(1);
   });
 
   it("serves passing healthcheck", async () => {
@@ -54,11 +71,11 @@ describe("news service", () => {
       .expect(200)
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
-        expect(Object.keys(result.checks).length).toBe(3);
+        expect(Object.keys(result.checks).length).toBe(4);
         expect(result.status).toBe("pass");
       });
 
-    expect(fetch).toHaveBeenCalledTimes(3);
+    expect(fetch).toHaveBeenCalledTimes(5);
 
     fetch.mockReturnValue(
       Promise.resolve(
@@ -73,7 +90,7 @@ describe("news service", () => {
       .expect(200)
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
-        expect(Object.keys(result.checks).length).toBe(3);
+        expect(Object.keys(result.checks).length).toBe(4);
         expect(result.status).toBe("fail");
       });
   });

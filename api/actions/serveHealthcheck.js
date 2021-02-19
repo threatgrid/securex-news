@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 
+const fetchBody = require("../../dataSources/securex-training/fetch-body");
 const packageVersion = require("../../package.json").version;
 const { asyncHandler } = require("../../utils");
 
@@ -27,6 +28,22 @@ const healthchecks = {
   "https://feeds.feedburner.com/": async () => {
     const response = await fetch(
       new URL("https://feeds.feedburner.com/CiscoBlogSecurity")
+    );
+
+    if (!response.ok) {
+      throw new Error("response status: " + response.status);
+    }
+  },
+  "https://learningnetwork.cisco.com/": async () => {
+    const response = await fetch(
+      new URL("https://learningnetwork.cisco.com/s/sfsites/aura"),
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: fetchBody(),
+      }
     );
 
     if (!response.ok) {

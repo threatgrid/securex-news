@@ -4,6 +4,7 @@
   "description": "SecureX news aggregation service",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test:lint": "eslint --max-warnings 0",
     "test": "npm run test:lint && jest",
     "upload-coverage": "codecov"
