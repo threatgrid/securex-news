@@ -1,5 +1,4 @@
 const Parser = require("rss-parser");
-const fs = require("fs");
 
 /**
  * Fetch RSS from Cisco Blog >> Security and convert to JSON.
@@ -15,8 +14,6 @@ exports.getNews = async () => {
     const rawNews = await parser.parseURL(
       "https://feeds.feedburner.com/CiscoBlogSecurity"
     );
-
-    fs.writeFileSync("./ciscoBlogResponse.json", JSON.stringify(rawNews));
 
     return rawNews.items.map((x) => ({
       title: x.title,

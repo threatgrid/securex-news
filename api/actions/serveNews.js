@@ -9,30 +9,69 @@ const {
   getNews: getUSCertNews,
   addSource: addUSCertSource,
 } = require("../../dataSources/us-cert");
-
 const {
   getNews: getCiscoBlogNews,
   addSource: addCiscoBlogSource,
 } = require("../../dataSources/cisco-blog");
+const {
+  getNews: getSecureXTrainingNews,
+  addSource: addSecureXTrainingSource,
+} = require("../../dataSources/securex-training");
 
 async function serveNews(req, res, next) {
-  let [talosNews, usCertNews, ciscoBlogNews] = await Promise.all([
+  let [
+    talosNews,
+    usCertNews,
+    ciscoBlogNews,
+    secureXTrainingNews,
+  ] = await Promise.all([
     getTalosNews(),
     getUSCertNews(),
     getCiscoBlogNews(),
+    getSecureXTrainingNews(),
   ]);
 
-  const news = [...staticNews, ...talosNews, ...usCertNews, ...ciscoBlogNews]
-    .sort((a, b) => {
-      return a.date > b.date ? -1 : a.date < b.date ? 1 : 0;
-    })
-    .slice(0, 10);
+  const news = [
+    ...staticNews,
+    ...talosNews,
+    ...usCertNews,
+    ...ciscoBlogNews,
+    ...secureXTrainingNews,
+  ]
+    .sort(
+      (
+        { date: date1, highlight: highlight1 },
+        { date: date2, highlight: highlight2 }
+      ) => {
+        let a = date1;
+        if (highlight1) {
+          a = new Date(
+            new Date(date1).getTime() + highlight1 * 86400000
+          ).toISOString();
+        }
+
+        let b = date2;
+        if (highlight2) {
+          b = new Date(
+            new Date(date2).getTime() + highlight2 * 86400000
+          ).toISOString();
+        }
+
+        return a > b ? -1 : a < b ? 1 : 0;
+      }
+    )
+    .slice(0, 10)
+    .map((x) => {
+      delete x.highlight;
+      return x;
+    });
 
   const newsSources = [...new Set(news.map((x) => x.sourceId))];
   const sources = staticSources;
   addTalosSource(sources);
   addUSCertSource(sources);
   addCiscoBlogSource(sources);
+  addSecureXTrainingSource(sources);
   Object.keys(sources).forEach((x) => {
     if (!newsSources.includes(x)) {
       delete sources[x];

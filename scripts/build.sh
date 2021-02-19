@@ -33,7 +33,7 @@ function build-and-publish-package {
   if [ "${PKG_TYPE}" == "int" ]; then
     echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
     sudo docker pull zeronorth/owasp-5-job-runner
-    sudo docker run -v /home/travis/build/threatgrid/securex-news:/code/ -e CYBRIC_API_KEY="${CYBRIC_API_KEY}" -e POLICY_ID=dJINQqrvQzyzGEksJGbgWg -e WORKSPACE=/home/travis/build/threatgrid/GLaDOS -v /var/run/docker.sock:/var/run/docker.sock --name zeronorth zeronorth/integration:latest python cybric.py
+    sudo docker run -v /home/travis/build/threatgrid/securex-news:/code/ -e CYBRIC_API_KEY="${CYBRIC_API_KEY}" -e POLICY_ID=dJINQqrvQzyzGEksJGbgWg -e WORKSPACE=/home/travis/build/threatgrid/securex-news -v /var/run/docker.sock:/var/run/docker.sock --name zeronorth zeronorth/integration:latest python cybric.py
     echo "Waiting the ZeroNorth Vulnerability Scanner to finish..."
     while [[ ! -z $(docker ps -a --format "{{.ID}}" -f status=running -f ancestor=zeronorth/owasp-5-job-runner) ]]; do sleep 5; done
   fi
