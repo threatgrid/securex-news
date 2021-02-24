@@ -50,6 +50,21 @@ const healthchecks = {
       throw new Error("response status: " + response.status);
     }
   },
+  "https://cdn.contentful.com/": async () => {
+    const response = await fetch(
+      `https://cdn.contentful.com/spaces/20j8s5zi43vw/environments/master/entries?limit=0`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer sMXk4-Ut9HyfnQ33NxzR2G7YEHl4vcx1hZOMb-kBZek",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("response status: " + response.status);
+    }
+  },
 };
 
 async function runHealthchecks() {
