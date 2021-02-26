@@ -2,6 +2,8 @@ jest.mock("node-fetch", () => {
   return jest.fn((url) => {
     const responseBody = url.startsWith("https://learningnetwork.cisco.com/")
       ? mockParseURLSecureXTraining()
+      : url.startsWith("https://cdn.contentful.com/")
+      ? mockParseURLSecureXCms()
       : "";
 
     return Promise.resolve({
@@ -20,6 +22,7 @@ const mockTalosFixture = require("./fixtures/talos/response.json");
 const mockUSCertFixture = require("./fixtures/us-cert/response.json");
 const mockCiscoBlogFixture = require("./fixtures/cisco-blog/response.json");
 const mockSecureXTrainingFixture = require("./fixtures/securex-training/response.json");
+const mockSecureXCmsFixture = require("./fixtures/contentful/response.json");
 const handler = require("../index.js");
 const { response } = require("express");
 
@@ -33,6 +36,9 @@ const mockParseURLCiscoBlog = jest
 const mockParseURLSecureXTraining = jest
   .fn()
   .mockImplementation(() => mockSecureXTrainingFixture);
+const mockParseURLSecureXCms = jest
+  .fn()
+  .mockImplementation(() => mockSecureXCmsFixture);
 jest.mock("rss-parser", () =>
   jest.fn().mockImplementation(() => ({
     parseURL: (source) =>
@@ -61,6 +67,7 @@ describe("news service", () => {
     expect(mockParseURLUSCert).toHaveBeenCalledTimes(1);
     expect(mockParseURLCiscoBlog).toHaveBeenCalledTimes(1);
     expect(mockParseURLSecureXTraining).toHaveBeenCalledTimes(1);
+    expect(mockParseURLSecureXCms).toHaveBeenCalledTimes(1);
   });
 
   it("serves passing healthcheck", async () => {
@@ -71,11 +78,11 @@ describe("news service", () => {
       .expect(200)
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
-        expect(Object.keys(result.checks).length).toBe(4);
+        expect(Object.keys(result.checks).length).toBe(5);
         expect(result.status).toBe("pass");
       });
 
-    expect(fetch).toHaveBeenCalledTimes(5);
+    expect(fetch).toHaveBeenCalledTimes(7);
 
     fetch.mockReturnValue(
       Promise.resolve(
@@ -90,7 +97,7 @@ describe("news service", () => {
       .expect(200)
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
-        expect(Object.keys(result.checks).length).toBe(4);
+        expect(Object.keys(result.checks).length).toBe(5);
         expect(result.status).toBe("fail");
       });
   });

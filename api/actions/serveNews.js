@@ -1,22 +1,11 @@
 const { asyncHandler } = require("../../utils");
-const staticNews = require("../../dataSources/local/news.json");
-const staticSources = require("../../dataSources/local/sources.json");
-const {
-  getNews: getTalosNews,
-  addSource: addTalosSource,
-} = require("../../dataSources/talos");
-const {
-  getNews: getUSCertNews,
-  addSource: addUSCertSource,
-} = require("../../dataSources/us-cert");
-const {
-  getNews: getCiscoBlogNews,
-  addSource: addCiscoBlogSource,
-} = require("../../dataSources/cisco-blog");
+const { getNews: getTalosNews } = require("../../dataSources/talos");
+const { getNews: getUSCertNews } = require("../../dataSources/us-cert");
+const { getNews: getCiscoBlogNews } = require("../../dataSources/cisco-blog");
 const {
   getNews: getSecureXTrainingNews,
-  addSource: addSecureXTrainingSource,
 } = require("../../dataSources/securex-training");
+const { getNews: getLocalNews } = require("../../dataSources/contentful");
 
 async function serveNews(req, res, next) {
   let [
@@ -24,19 +13,21 @@ async function serveNews(req, res, next) {
     usCertNews,
     ciscoBlogNews,
     secureXTrainingNews,
+    localNews,
   ] = await Promise.all([
     getTalosNews(),
     getUSCertNews(),
     getCiscoBlogNews(),
     getSecureXTrainingNews(),
+    getLocalNews(),
   ]);
 
   const news = [
-    ...staticNews,
-    ...talosNews,
-    ...usCertNews,
-    ...ciscoBlogNews,
-    ...secureXTrainingNews,
+    ...talosNews.items,
+    ...usCertNews.items,
+    ...ciscoBlogNews.items,
+    ...secureXTrainingNews.items,
+    ...localNews.items,
   ]
     .sort(
       (
@@ -67,11 +58,14 @@ async function serveNews(req, res, next) {
     });
 
   const newsSources = [...new Set(news.map((x) => x.sourceId))];
-  const sources = staticSources;
-  addTalosSource(sources);
-  addUSCertSource(sources);
-  addCiscoBlogSource(sources);
-  addSecureXTrainingSource(sources);
+  const sources = {
+    ...talosNews.sources,
+    ...usCertNews.sources,
+    ...ciscoBlogNews.sources,
+    ...secureXTrainingNews.sources,
+    ...localNews.sources,
+  };
+
   Object.keys(sources).forEach((x) => {
     if (!newsSources.includes(x)) {
       delete sources[x];
