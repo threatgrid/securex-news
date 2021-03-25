@@ -1,6 +1,8 @@
 jest.mock("node-fetch", () => {
   return jest.fn((url) => {
-    const responseBody = url.startsWith("https://learningnetwork.cisco.com/")
+    const responseBody = url.startsWith(
+      "https://learningnetwork.cisco.com/s/sfsites/aura"
+    )
       ? mockParseURLSecureXTraining()
       : url.startsWith("https://cdn.contentful.com/")
       ? mockParseURLSecureXCms()
@@ -9,6 +11,7 @@ jest.mock("node-fetch", () => {
     return Promise.resolve({
       ok: true,
       json: () => responseBody,
+      text: () => "/s/sfsites/auraFW/javascript/key/aura_prod",
     });
   });
 });
@@ -23,6 +26,7 @@ const mockUSCertFixture = require("./fixtures/us-cert/response.json");
 const mockCiscoBlogFixture = require("./fixtures/cisco-blog/response.json");
 const mockSecureXTrainingFixture = require("./fixtures/securex-training/response.json");
 const mockSecureXCmsFixture = require("./fixtures/contentful/response.json");
+const mockDuoFixture = require("./fixtures/duo/response.json");
 const handler = require("../index.js");
 const { response } = require("express");
 
@@ -39,6 +43,7 @@ const mockParseURLSecureXTraining = jest
 const mockParseURLSecureXCms = jest
   .fn()
   .mockImplementation(() => mockSecureXCmsFixture);
+const mockParseURLDuo = jest.fn().mockImplementation(() => mockDuoFixture);
 jest.mock("rss-parser", () =>
   jest.fn().mockImplementation(() => ({
     parseURL: (source) =>
@@ -48,6 +53,8 @@ jest.mock("rss-parser", () =>
         ? mockParseURLUSCert()
         : source.startsWith("https://feeds.feedburner.com/CiscoBlogSecurity")
         ? mockParseURLCiscoBlog()
+        : source.startsWith("https://duo.com/")
+        ? mockParseURLDuo()
         : "",
   }))
 );
@@ -60,7 +67,7 @@ describe("news service", () => {
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
         expect(result.items.length).toBe(10);
-        expect(Object.keys(result.sources).length).toBe(4);
+        expect(Object.keys(result.sources).length).toBe(3);
       });
 
     expect(mockParseURLTalos).toHaveBeenCalledTimes(1);
@@ -68,21 +75,27 @@ describe("news service", () => {
     expect(mockParseURLCiscoBlog).toHaveBeenCalledTimes(1);
     expect(mockParseURLSecureXTraining).toHaveBeenCalledTimes(1);
     expect(mockParseURLSecureXCms).toHaveBeenCalledTimes(1);
+    expect(mockParseURLDuo).toHaveBeenCalledTimes(1);
   });
 
   it("serves passing healthcheck", async () => {
-    fetch.mockReturnValue(Promise.resolve(new Response("200 OK")));
+    fetch.mockReturnValue(
+      Promise.resolve({
+        ok: true,
+        text: () => "/s/sfsites/auraFW/javascript/key/aura_prod",
+      })
+    );
 
     await request(handler)
       .get("/.well-known/healthcheck")
       .expect(200)
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
-        expect(Object.keys(result.checks).length).toBe(5);
+        expect(Object.keys(result.checks).length).toBe(6);
         expect(result.status).toBe("pass");
       });
 
-    expect(fetch).toHaveBeenCalledTimes(7);
+    expect(fetch).toHaveBeenCalledTimes(10);
 
     fetch.mockReturnValue(
       Promise.resolve(
@@ -97,7 +110,7 @@ describe("news service", () => {
       .expect(200)
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
-        expect(Object.keys(result.checks).length).toBe(5);
+        expect(Object.keys(result.checks).length).toBe(6);
         expect(result.status).toBe("fail");
       });
   });

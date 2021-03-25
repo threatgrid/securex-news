@@ -2,7 +2,7 @@
  * Construct the request body for fetching SecureX Training events.
  * @return {String}
  */
-module.exports = () => {
+module.exports = (key) => {
   var details = {
     message: JSON.stringify({
       actions: [
@@ -29,7 +29,7 @@ module.exports = () => {
     }),
     "aura.context": JSON.stringify({
       mode: "PROD",
-      fwuid: "8WYDoRiNKzw4em08r-Gg4A",
+      fwuid: key,
       app: "siteforce:communityApp",
       loaded: {
         "APPLICATION@markup://siteforce:communityApp": "fV3Zo7mI3PLrr1VMsCPF3w",

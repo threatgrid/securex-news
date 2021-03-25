@@ -8,6 +8,12 @@ const fetchBody = require("./fetch-body");
  */
 exports.getNews = async () => {
   try {
+    const page = await fetch("https://learningnetwork.cisco.com/s/event-list");
+    const pageHtml = await page.text();
+    const key = pageHtml.match(
+      /\/s\/sfsites\/auraFW\/javascript\/([^\/]+)\/aura_prod/
+    )[1];
+
     const response = await fetch(
       "https://learningnetwork.cisco.com/s/sfsites/aura",
       {
@@ -15,7 +21,7 @@ exports.getNews = async () => {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         },
-        body: fetchBody(),
+        body: fetchBody(key),
       }
     );
 
@@ -47,6 +53,7 @@ exports.getNews = async () => {
       },
     };
   } catch (err) {
+    console.log(err);
     return [];
   }
 };

@@ -35,6 +35,12 @@ const healthchecks = {
     }
   },
   "https://learningnetwork.cisco.com/": async () => {
+    const page = await fetch("https://learningnetwork.cisco.com/s/event-list");
+    const pageHtml = await page.text();
+    const key = pageHtml.match(
+      /\/s\/sfsites\/auraFW\/javascript\/([^\/]+)\/aura_prod/
+    )[1];
+
     const response = await fetch(
       new URL("https://learningnetwork.cisco.com/s/sfsites/aura"),
       {
@@ -42,7 +48,7 @@ const healthchecks = {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         },
-        body: fetchBody(),
+        body: fetchBody(key),
       }
     );
 
@@ -60,6 +66,13 @@ const healthchecks = {
         },
       }
     );
+
+    if (!response.ok) {
+      throw new Error("response status: " + response.status);
+    }
+  },
+  "https://duo.com/": async () => {
+    const response = await fetch(new URL("https://duo.com/decipher/feed"));
 
     if (!response.ok) {
       throw new Error("response status: " + response.status);
