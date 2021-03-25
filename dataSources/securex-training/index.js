@@ -53,7 +53,6 @@ exports.getNews = async () => {
       },
     };
   } catch (err) {
-    console.log(err);
     return [];
   }
 };
