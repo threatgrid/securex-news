@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0"
+	 xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	 xmlns:admin="http://webns.net/mvcb/"
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	 xmlns:atom="http://www.w3.org/2005/Atom">
+
+	<channel>
+  <atom:link href="https://duo.com/decipher/feed" rel="self" type="application/rss+xml" />
+  <title><![CDATA[Decipher]]></title>
+  <link>https://decipher.sc</link>
+  <description>Decipher is an independent editorial site that takes a practical approach to covering information security. Through news analysis and in-depth features, Decipher explores the impact of the latest risks and provides informative and educational material for readers curious about how security affects our world.</description>
+  <lastBuildDate>Wed, 24 Mar 2021 00:00:00 -0400</lastBuildDate>
+  <language>en-us</language>
+  <webMaster>info@decipher.sc (Amy Vazquez)</webMaster>
+  <copyright>Copyright 2021</copyright>
+  <ttl>3600</ttl>
+
+       <item>
+     <title><![CDATA[Q&A: Andrew Morris]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/q-and-a-andrew-morris</link>
+     <guid>https://duo.com/decipher/q-and-a-andrew-morris</guid>
+          <pubDate>Wed, 24 Mar 2021 00:00:00 -0400</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/worldmap.jpg"></p><p>The Internet is lousy with scanners, some malicious, some benign, and separating the traffic that matters from what doesn't is a thorny problem. TTaken together, those scanners create a tremendous amount of background noise, an issue that manny a security analyst has faced over the years. To find the traffic that matters from a security persepective, Andrew Morris built a massive set of sensors that listen to, rather than scan, the Internet, and that network has become the foundation for GreyNoise. Morris spoke with Dennis Fisher on the <a href="https://duo.com/decipher/decipher-podcast-andrew-morris">Decipher podcast</a> recently about the company's origins and the challenges of finding the important traffic. This is an edited transcript of that conversation.</p>
+
+<p>Dennis Fisher: Where did the initial idea for this come from?</p>
+
+<p>Andrew Morris: It's a long story. Originally as a pet project in maybe 2013, I set up a bunch of honeypots on the internet. There was this hosting provider that in retrospect it was probably a Ponzi scheme, but there was this hosting provider that allowed you to spend like $10 or $50 and buy like a VPS for life. I bought like 10 VPS and I set up a bunch of honeypots and I set up these honeypots in 10 different data centers around the internet and I'd never set up a honeypot before. And so I monitored the honeypot. I set up like a few different types of tech. And I looked at who logged into them and who tried to brute force those honeypots. I started getting attacks immediately and I was like, wow, the bad guys are coming for me. And I was looking at all this data. And then at some point, you know, I added like the 10th honeypot and I was like, man, this is a lot of data. So I'm going to, instead of logging in and checking the data on all these things, I'm going to put it into like a central place. And I'm going to look at the data from one place inside.</p>
+
+<p>I streamed it into Splunk and I'm looking at the data and I was like, man, look at all these bad guys, like, this is crazy. And then I noticed kind of out of nowhere that like a lot of the over a lot of the IP addresses that were attacking these hosts on the internet, there was a lot of overlap.There were a lot of IPs that were attacking all of them. They're all in completely different data centers in different countries around the world, like in very different locations geographically. I'm seeing the same one, two, three, four, five, 1,000 IP addresses, attacking all these things. And I was like, man, that's crazy. And so I remember thinking about it, like this is threat Intel, right? I found the bad guys! And after I had a lot of conversations and I talked to a lot of people some switch flipped in my head where I was like, wait, this isn't the stuff that people should be worried about. This is the stuff that's hitting everybody. This is just like internet background noise. This is like anti threat intelligence. And then when it got extremely interesting, was when you overlaid what you were seeing from these honeypots on the internet on top of like an actual network that has actual business users. And what I found is that it creates this noise canceling effect where you basically have, what's hitting everybody on the internet totally opportunistically.</p>
+
+<p>And you subtract that out from what is hitting somebody's network. And what you're left with is only the things that are hitting that network specifically, both legitimate, regular business users, but also, you know, targeted attacks. So I built this thing at, I built this thing and I presented it at ShmooCon 2014 or so. And that was when someone asked the question, what is the expected amount of scan traffic that any host on the internet should see? And that question is so hard to answer and is so vast and so massive. And the implications of properly answering that question took me down this massive rabbit hole, but I'm still going down with GreyNoiseright now. But that's functionally kind of like where the idea came from</p>
+
+<p>Dennis Fisher: So until you gave that talk at ShmooCon and somebody came up to you and was like, Hey, you know, this is a real thing. Had you thought about like, Oh, maybe there's a business in this, or was that kind of the spark of it?</p>
+
+<p>Andrew Morris: No, no, no, no. Not, not even a little bit. That just isn't what really motivated me at the time. It was like, I just wanted to do cool stuff. I wanted to solve problems and do cool stuff. So even if somebody came and said, Hey, I'll give you a bunch of money, but you have to solve a different problem. I would have been like, well, but I don't want to solve a different problem. I just found this one really cool. And so I wasn't even thinking about the business aspect of it. I only ever started thinking about the business aspect of anything and making money once it became apparent to me that the only way to properly have control of building this thing in the exact way that I think it needs to happen was to build a company around it and to build a company around something, you have to think about money.</p>
+
+<p>Dennis Fisher: So what were you doing at the time? What was your job when you set up the honeypots?</p>
+
+<p>Andrew Morris: I was on a staff augmentation role for a customer and they wanted to hire me. And so I was like, Oh, sick. Right. Like I'm going to join this company full time. And then like, right at the last second, the offer was rescinded after I'd already quit my other job. So it was like, I didn't actually get fired. I got like un-hired, which it felt like getting fired. And so I was like, well, you know, I'm looking for something to do. And this just seemed like a fun thing to do. And that, like, I've never really told anybody that before, but that's honest to God where I was, I had some downtime between jobs and I was kind of looking for a cool thing to occupy my time.</p>
+
+<p>Dennis Fisher: Honestly, that's where some of the coolest ideas come from, not just in security, but, or even technology, but in life in general, if you just have some time to think about things that maybe you're vaguely aware of, but you have too much other stuff going on.</p>
+
+<p>Andrew Morris: That's exactly right. It's like when you meditate and you clear up your mind and you clear it out, you give yourself all this new space to be creative and to think about new things. And so sometimes taking a step away, taking a step back from your slog or the grind or the knife fight that is kind of the day-to-day, it gives you some flexibility. And unfortunately it's the kind of thing that not everybody has the opportunity or the option to do, because sometimes you just got to slog. I didn't choose to take two weeks to just think about cool stuff and what I wanted to do.</p>
+
+<blockquote>
+  <p>"I just found this one problem really cool. And so I wasn't even thinking about the business aspect of it."</p>
+</blockquote>
+<p>Dennis Fisher: How close to what GreyNoise is now was the original vision? What's the delta between what you originally produced and where it is now?</p>
+
+<p>Andrew Morris: Oh, it's a great question. So it's gone through so many different iterations. I would say that GreyNoise right now is the exact embodiment of what the vision was several years ago before it got bigger and cooler. I was imagining Shodan, but the opposite. So the same kind of layout, similar workflow, similar kind of usability, similar freemium, similar feel, except obviously the data that we collect is the exact opposite of the data that Shodan collects, right? We don't scan the internet. We listened to the internet. But laying out the data similarly, I've always been a huge fan of Shodan. So it was like, borrow and borrow from those who do good stuff, borrow from those who have figured it out. We have thousands of users. We have all these customers. And so now there are so many more things for us to do and the vision has gotten a lot bigger. And so where we're going is not at all where I envisioned a few years ago. We've kind of already surpassed that, which is exciting.</p>
+
+<p>Dennis Fisher: What are the most common use cases for your customers right now?</p>
+
+<p>Andrew Morris: So our elevator pitch that we give to people when we're talking to customers or potential customers is every security operation center is, too busy. One of the reasons they're too busy is they have way too many alerts. Some of those alerts don't matter very much because they're generated by completely pointless, opportunistic internet wide scanning attack traffic. That's not even a little bit targeted towards them. We'll tell you which alerts are generated by that, you know, maybe 20, 30, 40% so that you can focus on the alerts that really matter to you and like noise canceling headphones for your center, for your security products. That's our two second sales pitch for what we tell our enterprise customers. We run a gigantic network of collectors, kind of like honeypots and all these different countries. We collect data in a bunch of places. We analyze that data. We make that data available in a web interface, APIs and security integrations. What can you use GreyNoise to do? Really three main use cases. The first one is, to answer the question, is this thing hitting everybody, or is it just hitting me? I just saw this thing hit my network and it looks weird and it raised an alert, or it did a thing. I'm gonna look it up in GreyNoise. And if it comes back in GreyNoise that means that it's hitting everybody on the entire internet. Not just you, it's not a targeted attack. Number two, show me where compromised devices are. As a byproduct of all the data that we collect, we know where a massive amount of compromised devices are on the internet, hundreds of thousands every day. So we can tell you, Hey, these 300,000 IP addresses were compromised in the last day, right? And now that's useful. That's useful to people because we can tell you if something that you have is compromised, we'll use our alerts feature to do that.</p>
+
+<p>And then the third, most common use case, is this identification of emerging threats and which vulnerabilities are being opportunistically exploited, and from where. What we do is our engineering teams and our engineering and research teams will put something together on our side so that we're able to get some visibility. We'll make something that looks like the thing that's vulnerable. And we'll instrument the crap out of it. And then we will look to see what happens. What does the internet, what did the scanners do when they found it? Do we find anybody who's checking for the existence of the vulnerability? Do we find anybody that's opportunistically exploiting the vulnerability? Do we find anybody that's doing that at scale? Anybody that's doing that in multiple places.</p>
+
+<p>Dennis Fisher: You mentioned earlier that a large part of the stuff that hits a given enterprise in a given day is stuff that they don't really need to be all that concerned about. It's mass scan stuff. I know this is going to vary widely by organization, but in general, how much of the attack activity that organizations see is something they need to worry about?</p>
+
+<p>Andrew Morris: That's such a great question. So I don't ever advise that our users filter out anything because you can't get that. You don't want to drop data. You can never get it back. And if the tool is wrong, then you're in a bad position. So you may want to put things in a lower priority on the queue. You may want to deprioritize things. You may want to put certain events in cheaper storage. The answer is, it depends. It depends on a lot of different factors, but every organization that we work with on average, from just about any organization is going to find a hit rate of the alerts that they're seeing that are making it to a security analyst through all of their other automation of at least 20%.</p>
+
+<blockquote>
+  <p>"Where we're going is not at all where I envisioned a few years ago. We've kind of already surpassed that, which is exciting."</p>
+</blockquote>
+<p>Dennis Fisher: I've had conversations with people that work in SOCs many times over the years. And they all have kind of that thousand yard stare after a while. Reducing the noise must be such a huge thing for them.</p>
+
+<p>Andrew Morris: Yeah. At the end of the day, security people don't want more things to worry about, right? I promise you, they don't, the people in the SOC are overworked. They are exhausted. It is a very hard job. They are getting alerts from a zillion security products. They are desensitized to a massive amount of those alerts being absolutely useless wastes of time. And they are frustrated. We focus on getting you to the conclusion of this isn't really a big deal as quickly as humanly possible because of the exact reason that you were just describing before. The people who work in SOCs are exhausted. And the security industry is not making it any better. We're just making it worse. And so we're trying to do the exact opposite of what every security company, or every product company in the SOC has ever done. And that's just give more context.</p>
+
+<p>Dennis Fisher: Are there any non-security applications for the data that you guys see and collect?</p>
+
+<p>Andrew Morris: I'm asked that question a lot. The answer is mostly no, but if there are, I just haven't seen them yet. The two things that immediately jump out to me though, is that one, there is a massive operational spend that goes into storing logs that are generated by internet wide opportunistic scan and attack traffic sometimes just for compliance reasons. So, I mean, it's going to sound insane, but I'm going to tell you right now, there's a lot of organizations out there that capture firewall logs of everything that's happening on their firewalls may have to store it for compliance. And a lot of that stuff is,, I cannot stress this enough, meaningless. And we know the difference between what is and isn't meaningless. The only other thing is when the internet goes off somewhere, all of the internet background noise stops there. And so there is some applicability of using GreyNoise in the capacity of trying to identify problem areas of the internet, or even just like pipeline issues and the internet.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[ProxyLogon Bug Still Haunting Thousands of Exchange Servers]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/proxylogon-bug-still-haunting-thousands-of-exchange-servers</link>
+     <guid>https://duo.com/decipher/proxylogon-bug-still-haunting-thousands-of-exchange-servers</guid>
+          <pubDate>Tue, 23 Mar 2021 00:00:00 -0400</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/bugs-decipher.jpg"></p><p>The number of servers vulnerable to the <a href="https://duo.com/decipher/number-of-exchange-servers-vulnerable-to-proxylogon-declines">Exchange ProxyLogon flaw</a> is continuing to drop, but there are still nearly 30,000 unpatched servers online and many of them appear to have multiple webshells installed by attackers.</p>
+
+<p>Security firm Kryptos Logic on Tuesday said it had scanned 250,000 unique IP addresses for the vulnerability and found 29,796 vulnerable servers. The company also found more than 97,000 webshells installed across more than 15,000 individual IP addresses. That data shows that things are moving in the right direction, as last week Kryptos Logic reported more than 62,000 vulnerable servers.</p>
+
+<p>Microsoft released emergency fixes for four vulnerabilities in Exchange three weeks ago now, and the most serious of those bugs is a server-side request forgery issue (CVE-2021-26855) that attackers can use to gain initial access to Exchange servers. The three other vulnerabilities patched in early March can be used for further movement on the server. Public exploit code is widely available for the SSRF flaw and researchers have identified many separate attack groups that are targeting the flaw, and they’re seeing plenty of success, unfortunately.</p>
+
+<p>“We’ve come to a point now that the original spread was a drive-by, let’s get as many webshells out in the ether as possible. Whether you’re the original actor or not, those webshells are out there and available,” said John Hammond, senior security researcher at Huntress Labs.</p>
+
+<p>“We’re a few weeks in now and people are sharing fragments of public exploits so now it’s open season even more than it already was.”</p>
+
+<p>With tens of thousands of servers still vulnerable, attackers are seizing the opportunity to not just steal sensitive data and gain persistent access to networks, but also to install ransomware and maximize the potential profit to be had. At least two separate strains of ransomware have been seen as part of incidents involving the Exchange bug, including DearCry, and the Lemon Duck botnet has started targeting the flaw, too. Although the patches have been available for three weeks now, some of the servers that are still vulnerable may never be updated, and even some that have been patched may still have active webshells on them that attackers can still access.</p>
+
+<p>“Knowing the filename of the webshell and the HTTP variable is all you need. Because there’s so much threat intel out there on these webshells, it wouldn’t be very hard for a threat actor to find one and brute force the key,” Hammond said.</p>
+
+<p>“The patch conversation has a lot of paths to it. There is a point where if you haven’t patched, you kind of throw your hands in the air and say it’s time to go home.”</p>
+
+<p>If patching is not an option at the moment, Microsoft has released instructions for <a href="https://msrc-blog.microsoft.com/2021/03/05/microsoft-exchange-server-vulnerabilities-mitigations-march-2021/">mitigating the vulnerabilities</a>, and has also published a tool that will help find and remove existing webshells on compromised servers.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Exploits Target F5 BIG-IP Flaw]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/exploits-target-f5-big-ip-flaw</link>
+     <guid>https://duo.com/decipher/exploits-target-f5-big-ip-flaw</guid>
+          <pubDate>Fri, 19 Mar 2021 00:00:00 -0400</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/darts.jpg"></p><p>Attackers have begun taking advantage of a <a href="https://duo.com/decipher/four-critical-flaws-hit-f5-big-ip-boxes">critical remote unauthenticated code execution bug in F5’s BIG-IP appliances</a> and researchers have detected at least two separate IP addresses that are using a full exploit chain for the bug.</p>
+
+<p>The vulnerability (CVE-2021-22986) affects every version of the BIG-IP system, which is used in enterprises and other settings for traffic inspection and load balancing, among other tasks. F5 released a fix for the vulnerability on March 10 and warned customers that a successful exploit could lead to complete system compromise. Within a few days, security researchers had released several different proof-of-concept exploits. On Thursday, researchers at NCC Group released a <a href="https://research.nccgroup.com/2021/03/18/rift-detection-capabilities-for-recent-f5-big-ip-big-iq-icontrol-rest-api-vulnerabilities-cve-2021-22986/">detailed analysis of the exploit attempts</a> they had seen, which at that point were not complete.</p>
+
+<p>But by Friday that had changed and the researchers had seen complete full-chain exploits for the vulnerability coming from two separate IP addresses.</p>
+
+<p>Exploitation of the vulnerability grants essentially unrestricted access to the target appliance.</p>
+
+<p>“This vulnerability allows for unauthenticated attackers with network access to the iControl REST interface, through the BIG-IP management interface and self IP addresses, to execute arbitrary system commands, create or delete files, and disable services. This vulnerability can only be exploited through the control plane and cannot be exploited through the data plane,” the F5 advisory says.</p>
+
+<p>The NCC Group researchers released detailed detection capabilities for the bug, as well as an analysis of what’s needed to exploit it.</p>
+
+<p>“Exploitation of this vulnerability requires two steps. First, authentication has to be bypassed by leveraging the SSRF vulnerability to gain an authenticated session token. This authenticated session can then be used to interact with REST API endpoints, which would otherwise require authentication,” a post by Rich Warren and Sander Laarhoven says.</p>
+
+<p>“The most useful endpoint for an attacker is the tm/util/bash endpoint, which allows an (authenticated) user to execute commands on the underlying server with root privileges. However, as the REST API is designed for remote administration, there are many endpoints which an attacker might wish to take advantage of.”</p>
+
+<p>Organizations running BIG-IP appliances should apply the fixes as soon as possible, especially in light of the confirmed full-chain exploits in the wild.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Requiring a VDP for Suppliers Won't Fix Supply Chain Security]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/requiring-vdps-for-suppliers-wont-fix-supply-chain-security</link>
+     <guid>https://duo.com/decipher/requiring-vdps-for-suppliers-wont-fix-supply-chain-security</guid>
+          <pubDate>Thu, 18 Mar 2021 00:00:00 -0400</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/capitolsunrise-decipher.jpg"></p><p>The <a href="https://duo.com/decipher/the-long-tail-of-the-solarwinds-breach">SolarWinds compromise</a> and the ever-expanding list of after effects has created a swirl of activity not just in the security and technology industries, but also on Capitol Hill, where there has been a long series of hearings on the intrusion as legislators search for answers about its causes and what can be done to prevent a similar supply chain attack in the future. One of the ideas that has surfaced from all of those discussions is the possibility of extending the directive for all federal agencies to develop a vulnerability disclosure policy (VDP) to third-party suppliers in the private sector.</p>
+
+<p>In September, the Cybersecurity and Infrastructure Security Agency (CISA) <a href="https://duo.com/decipher/cisa-issues-final-order-on-federal-vulnerability-disclosure-but-questions-remain">issued a binding operation directive</a> that required all federal civilian agencies to develop and publish a VDP. The directive required agencies not just to establish a public method for researchers to contact them with a bug report, such as a security@ address, but also to list which systems are in scope, the kind of testing of those systems that’s allowed, and a commitment not to pursue legal action against people who engage in good faith research that falls within the guidelines of the policy. Those policies were due at the beginning of March, with the goal of the directive being to enable agencies “to remediate vulnerabilities before they can be exploited by an adversary.”</p>
+
+<p>But those policies are confined to systems owned and operated by federal agencies, and each agency is only required to have a minimum of one system covered by its policy. The Department of Agriculture, for example, lists five of its websites as being in scope of the VDP. One of the issues with this approach is that federal agencies, like any other large organization, use software and hardware from a wide variety of suppliers and are reliant upon those companies to ensure the security and reliability of their products. The SolarWinds compromise laid bare a problem that many people in the security industry have warned about for years: a well-placed malicious update or backdoor in a popular piece of software could have devastating downstream effects.</p>
+
+<p>During a hearing of the Senate Committee on Homeland Security and Governmental Affairs Thursday on the ramifications of the SolarWinds intrusion, a senator raised the idea of having the requirement for a VDP apply to any company that supplies software to federal agencies.</p>
+
+<p>“Are you considering extending the directive to cover third-party vendors, especially those that provide IT products or services to the federal government?” asked Sen. Jacky Rosen (D-Nev.).</p>
+
+<blockquote>
+  <p>"There’s absolutely nothing about a VDP that would’ve informed SolarWinds about this compromise."</p>
+</blockquote>
+<p>Brandon Wales, the acting director of CISA, said that the agency had not considered that possibility, and added that there were other methods for handling the issue, such as language in procurement contracts.</p>
+
+<p>“It’s not clear that we would necessarily need to do that through a directive. It’s an interesting idea,” Wales said.</p>
+
+<p>VDPs are not a new concept, but they are relatively new to the federal government, and many large technology vendors don’t have their own published policies. There is an existing pilot program for government suppliers in the defense industrial base to develop VDPs, and a bill passed last fall <a href="https://duo.com/decipher/house-passes-iot-security-bill">focused on IoT security</a> has provisions that require vendors who sell devices to the federal government  to develop capabilities to find and fix vulnerabilities in their devices. Requiring a supplier to have a VDP could be a useful method for addressing some security concerns, but a supply chain attack like the SolarWinds incident is not at the top of that list.</p>
+
+<p>“All of those things are moving toward a better future but we’re still at the very early stages of governments understanding how VDPs work and how to run them effectively,” said Katie Moussouris, CEO and founder of Luta Security, which helps organizations develop sustainable VDPs.</p>
+
+<p>“I’d be happier if more of these organizations invested money and resources earlier in the software development lifecycle. We’d get more bang for our buck. There’s absolutely nothing about a VDP that would’ve informed SolarWinds about this compromise. That would absolutely have been out of scope for any VDP. There’s a big misunderstanding on the return on investment from VDPs relative to other security measures. It would have done nothing to help any of the other software companies downstream.”</p>
+
+<p>What may have helped federal agencies detect the activities of the SolarWinds attackers in their environments, CISA’s Wales said, is shifting some of the defensive focus in the government from network detection to endpoint detection.</p>
+
+<p>“You can only secure what you can see. Our adversaries have advanced. They’re no longer using the same infrastructure to target us repeatedly. This is all designed to ensure we don’t know where they’re coming from and our traditional systems are unable to stop them. We need to deploy different types of systems to ensure we have the right types of insight,” Wales said.</p>
+
+<p>“There needs to be the right balance. Those perimeter security sensors are valuable, but that balance was too far out of whack in the past, too focused on the network and not the endpoint.”</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[SolarWinds Attackers Accessed Mimecast Source Code]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/solarwinds-attackers-accessed-mimecast-source-code</link>
+     <guid>https://duo.com/decipher/solarwinds-attackers-accessed-mimecast-source-code</guid>
+          <pubDate>Wed, 17 Mar 2021 00:00:00 -0400</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/lines-of-code.jpg"></p><p>The attackers who <a href="https://duo.com/decipher/the-long-tail-of-the-solarwinds-breach">got into SolarWinds</a>, accessed some of Microsoft’s source code, and broke into many other companies in last year’s supply chain compromise not only stole a Mimecast certificate used to authenticate customers, but also <a href="https://www.mimecast.com/incident-report/">downloaded some of the company’s source code repositories</a>.</p>
+
+<p>Although the attackers accessed and downloaded the repositories, they did not modify any of the code on Mimecast’s own systems, the company said in an update on its investigation into the incident. Mimecast, an email security company with a long list of enterprise customers, first <a href="https://duo.com/decipher/mimecast-says-attackers-stole-certificate-targeted-customers-email">revealed the intrusion in January</a> in the aftermath of the disclosure of the SolarWinds compromise and its after effects. At the time, Mimecast officials did not connect the incident to the SolarWinds intrusion and said only that the attackers had stolen one of its certificate and that Microsoft had notified the company that the certificate had been used to impersonate a small number of customers.</p>
+
+<p>“Microsoft recently informed us that a Mimecast-issued certificate provided to certain customers to authenticate Mimecast Sync and Recover, Continuity Monitor, and IEP products to Microsoft 365 Exchange Web Services has been compromised by a sophisticated threat actor,” the company said in January.</p>
+
+<p>Since then, Mimecast has continued investigating the intrusion, with the assistance of Mandiant, the incident response firm that has investigated many of the incidents connected to the SolarWinds compromise. Mandiant was able to confirm that the Mimecast attack was in fact connected to the actors who had targeted SolarWinds, Microsoft and other tech companies and government agencies. The attackers gained access to a portion of the company’s production environment comprising Windows servers.</p>
+
+<p>“Our investigation determined that the initial intrusion resulted from SUNBURST malware, the backdoor present in the compromised version of SolarWinds Orion software we had previously used in our environment,” Mimecast said in a report on the investigation Tuesday.</p>
+
+<p>“We determined that the threat actor leveraged our Windows environment to query, and potentially extract, certain encrypted service account credentials created by customers hosted in the United States and the United Kingdom. These credentials establish connections from Mimecast tenants to on-premise and cloud services, which include LDAP, Azure Active Directory, Exchange Web Services, POP3 journaling, and SMTP-authenticated delivery routes.”</p>
+
+<blockquote>
+  <p>“We found no evidence that the threat actor made any modifications to our source code nor do we believe that there was any impact on our products.</p>
+</blockquote>
+<p>Despite that access, Mimecast said it had no evidence that the attackers got to email content that the company stores for customers.</p>
+
+<p>More concerningly, the attackers were also able to gain access to some of Mimecast’s source code repositories and download them. This is one of the same tactics that the attackers used in their <a href="https://duo.com/decipher/solarwinds-attackers-accessed-but-did-not-modify-microsoft-source-code">intrusion at Microsoft</a>, though in both cases the company’s said that the attackers did not modify the source code.</p>
+
+<p>“The investigation revealed that the threat actor accessed and downloaded a limited number of our source code repositories, as the threat actor is reported to have done with other victims of the SolarWinds Orion supply chain attack. We believe that the source code downloaded by the threat actor was incomplete and would be insufficient to build and run any aspect of the Mimecast service,” the company said.</p>
+
+<p>“We found no evidence that the threat actor made any modifications to our source code nor do we believe that there was any impact on our products. We will continue to analyze and monitor our source code to protect against potential misuse.”</p>
+
+<p>The company said that it had also completed a forensic analysis of all of the Mimecast software deployed to customers and confirmed that the build process had not been tampered with.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Decipher Podcast: Andrew Morris]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/decipher-podcast-andrew-morris</link>
+     <guid>https://duo.com/decipher/decipher-podcast-andrew-morris</guid>
+          <pubDate>Tue, 16 Mar 2021 00:00:00 -0400</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/noise-decipher.jpg"></p><div id="buzzsprout-player-8150456"></div>
+
+
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Microsoft Releases One-Click Mitigation for Exchange Flaw]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/microsoft-releases-one-click-mitigation-for-exchange-flaw</link>
+     <guid>https://duo.com/decipher/microsoft-releases-one-click-mitigation-for-exchange-flaw</guid>
+          <pubDate>Tue, 16 Mar 2021 00:00:00 -0400</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/windowskeyboard.jpg"></p><p>Microsoft has released a new tool that will install a mitigation for the ProxyLogon vulnerability in Exchange automatically on any vulnerable server.</p>
+
+<p>The <a href="https://msrc-blog.microsoft.com/2021/03/15/one-click-microsoft-exchange-on-premises-mitigation-tool-march-2021/">new tool</a> is designed specifically to help organizations such as SMBs that likely do not have their own security personnel. Although the mitigation tool is not a complete patch for CVE-2021-26855, the server-side request forgery bug in Exchange that allows initial access, it does make some changes that prevent the exploits for the vulnerability from working. It also will reverse changes to exploited servers made by known threat actors targeting the vulnerability.</p>
+
+<p>“Microsoft has released a new, one-click mitigation tool, Microsoft Exchange On-Premises Mitigation Tool to help customers who do not have dedicated security or IT teams to apply these security updates. We have tested this tool across Exchange Server 2013, 2016, and 2019 deployments. This new tool is designed as an interim mitigation for customers who are unfamiliar with the patch/update process or who have not yet applied the on-premises Exchange security update,” Microsoft said.</p>
+
+<p>“This tool is not a replacement for the Exchange security update but is the fastest and easiest way to mitigate the highest risks to internet-connected, on-premises Exchange Servers prior to patching.”</p>
+
+<blockquote>
+  <p>Data compiled by RiskIQ from an Internet-wide scan yesterday shows more than 65,000 unpatched Exchange servers worldwide.</p>
+</blockquote>
+
+<p>The vulnerability that this tool addresses is one part of an attack chain that includes three other flaws in Exchange. Microsoft released emergency patches for all of those vulnerabilities on March 2, saying that a new threat actor it named Hafnium had been exploiting them to take control of mail servers and steal the contents of inboxes. Since then, a number of other groups have begun widespread attacks on these vulnerabilities, including several APT groups and cybercrime groups. In a small number of intrusions, attackers have installed a new ransomware variant called DearCry on servers after the initial compromise.</p>
+
+<p>The attacks have not been limited to high-value targets such as large enterprises, technology companies, government agencies, and research facilities, but have also hit small municipalities, SMBs, and other organizations. That latter population is at a disadvantage relative to the larger companies, as smaller companies often don’t have their own security staff, and possibly not even an IT staff, to install security updates.</p>
+
+<p>Although the patches have been available for two weeks now, there are still many vulnerable servers online. Data compiled by RiskIQ from an Internet-wide scan yesterday shows more than 65,000 unpatched Exchange servers worldwide. That number has been <a href="https://duo.com/decipher/number-of-exchange-servers-vulnerable-to-proxylogon-declines">declining steadily</a>, but 65,000 servers still offers plenty of opportunities for attackers, regardless of their motivations or backing.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Number of Exchange Servers Vulnerable to ProxyLogon Declines]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/number-of-exchange-servers-vulnerable-to-proxylogon-declines</link>
+     <guid>https://duo.com/decipher/number-of-exchange-servers-vulnerable-to-proxylogon-declines</guid>
+          <pubDate>Mon, 15 Mar 2021 00:00:00 -0400</pubDate>
+     <description>
+              <![CDATA[<p>It’s been two weeks since Microsoft released patches for four vulnerabilities in on-premises Exchange servers, and while the company, federal officials, and security researchers have emphasized the seriousness of the bugs and the need to patch, Internet scan data shows that there are still a significant number of vulnerable Exchange servers online, a large chunk of which are in the United States.</p>
+
+<p>Data collected by RiskIQ, which maps the Internet for security intelligence, asset discovery and attack surface purposes, shows that as of March 14, there were 69,548 Exchange servers online that are still vulnerable. That’s a significant decrease from the roughly 400,000 vulnerable servers that were detected on the day that Microsoft released the patches on March 2, but it still represents a broad attack surface and a large opportunity for adversaries. Several versions of Exchange are vulnerable to the four bugs known as ProxyLogon, including Exchange 2013, 2016, and 2019. A separate data set compiled by security firm Kryptos Logic found 62,018 servers vulnerable to CVE-2021-26855, the server-side request forgery flaw that allows initial access to Exchange servers.</p>
+
+<p>“While the numbers are falling, they’re not falling fast enough. If you have an exchange server unpatched and exposed to the Internet, your organization is likely already breached. One reason the response may be so slow is many organizations may not realize they have exchange servers exposed to the Internet—this is a common issue we see with new customers,” RiskIQ said in a <a href="https://www.riskiq.com/blog/external-threat-management/microsoft-exchange-server-landscape/?utm_campaign=exchange_landscape_blog&amp;utm_source=twitter&amp;utm_medium=social&amp;utm_content=exchange_landscape_blog_twitter">post</a>.</p>
+
+<p>“Another is that while new patches are coming out every day, many of these servers are not patchable and require upgrades, which is a complicated fix and will likely spur many organizations to migrate to cloud email.”</p>
+
+<blockquote>
+  <p>"One reason the response may be so slow is many organizations may not realize they have Exchange servers exposed to the Internet."</p>
+</blockquote>
+
+<p>An additional factor contributing to the volume of vulnerable servers online is that a significant number of the organizations running those servers may not have the resources to install the fix or the ability to have their email server offline for any length of time. Many of the Exchange servers located in on-premises environments are in SMBs, school districts, small municipal agencies, and other organizations that likely do not have in-house IT security staff to assess the situation and install the updates. In a <a href="https://censys.io/microsoft-exchange-vulnerabilities-mar2021/">data set collected by Censys</a>, about 20 percent of the on-premises Exchange servers online (not specifically servers vulnerable to ProxyLogon) belong to educational institutions, and another 6.5 percent are in health care equipment and services companies.</p>
+
+<p>Several separate groups have been exploiting the Exchange vulnerabilities since they were disclosed, including at least 10 individual APT groups and an unknown number of cybercrime groups. At least one strain of ransomware, <a href="https://duo.com/decipher/dearcry-ransomware-hitting-exchange-servers">called DearCry</a>, has been installed on compromised Exchange servers after the initial exploitation, as well. The availability of public exploit code for the ProxyLogon flaw as well as a module for the Metasploit penetration testing framework adds another layer of concern to the situation, increasing the level of urgency to install the patches if at all possible. If patching isn’t in the cards at the moment, MIcrosoft has published a <a href="https://msrc-blog.microsoft.com/2021/03/05/microsoft-exchange-server-vulnerabilities-mitigations-march-2021/">set of mitigations</a> to help lessen the effects of an attack, but these are not meant to be permanent replacements for patching.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[DearCry Ransomware Hitting Exchange Servers]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/dearcry-ransomware-hitting-exchange-servers</link>
+     <guid>https://duo.com/decipher/dearcry-ransomware-hitting-exchange-servers</guid>
+          <pubDate>Fri, 12 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/money-house-decipher.jpg"></p><p>While large-scale <a href="https://duo.com/decipher/attacks-on-exchange-servers-spread">attack activity against the Exchange flaws</a> disclosed last week continues, some actors are now following up their intrusions by installing a new strain of ransomware known as DearCry.</p>
+
+<p>The ransomware began appearing on Tuesday, and researchers quickly identified that it was being used in conjunction with exploits for the Exchange flaws. Microsoft security officials said Thursday night that the company was already blocking DearCry.</p>
+
+<p>“We have detected and are now blocking a new family of ransomware being used after an initial compromise of unpatched on-premises Exchange Servers. Microsoft protects against this threat known as Ransom:Win32/DoejoCrypt.A, and also as DearCry,” the Microsoft Security Intelligence team <a href="https://twitter.com/MsftSecIntel/status/1370236539427459076">said</a>.</p>
+
+<p>The DearCry ransomware installations are human operated, according to Microsoft, meaning they’re not part of an automated chain. Researchers said the first samples of DearCry surfaced on Tuesday, just as attacks against the Exchange bugs, known as ProxyLogon, were ramping up. There are public exploits available for the flaws and MIcrosoft, CISA, and security researchers have been urging customers to install the patches immediately, given the ease of exploitation and the volume of activity.</p>
+
+<p>The Exchange vulnerabilities have been the targets of a massive amount of exploit activity in the last week, with several individual APT groups going after them. Researchers at ESET discovered as many as 10 separate APT groups exploiting the Exchange vulnerabilities in the last few days, several of which are centered in China, but not all.</p>
+
+<p>“The day after the release of the patches, we started to observe many more threat actors scanning and compromising Exchange servers en masse. Interestingly, all of them are APT groups focused on espionage, except one outlier that seems related to a known coin-mining campaign,” said Matthieu Faou of ESET.</p>
+
+<p>In most cases, the attackers who exploit the Exchange flaws are going after sensitive information in email and elsewhere. But when the details of the vulnerabilities first became public, researchers warned that it was likely only a matter of time before ransomware actors entered the picture, as well. The initial details about DearCry are sparse, but it does not appear to be anything unusual. Researchers at <a href="https://twitter.com/malwrhunterteam/status/1370148335949127682">Malware Hunter Team</a> found that the ransomware creates a new service named “msupdate” after installation that it uses to start encrypting files.</p>
+
+<p>Organizations that have not installed the Exchange patches yet, should so immediately. But with the volume of attack activity targeting vulnerable servers, any unpatched server shold be considered compromised at this point.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Decipher Podcast: Joe Slowik]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/decipher-podcast-joe-slowik</link>
+     <guid>https://duo.com/decipher/decipher-podcast-joe-slowik</guid>
+          <pubDate>Thu, 11 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/blog/rdp-servers.jpg"></p><div id="buzzsprout-player-8123797"></div>
+
+
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Four Critical Flaws Hit F5 BIG-IP Boxes]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/four-critical-flaws-hit-f5-big-ip-boxes</link>
+     <guid>https://duo.com/decipher/four-critical-flaws-hit-f5-big-ip-boxes</guid>
+          <pubDate>Wed, 10 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/datacenters.jpg"></p><p>In a week that has already brought the <a href="https://duo.com/decipher/attacks-on-exchange-servers-spread">disclosure of four Exchange zero days</a>, and a massive Patch Tuesday release from Microsoft that included fixes for seven serious DNS flaws, the last thing enterprise security teams needed was another major set of bugs to worry about. But on Wednesday, F5 announced <a href="https://support.f5.com/csp/article/K02566623">four critical vulnerabilities in its BIG-IP appliances</a>, all of which allow remote code execution.</p>
+
+<p>The four bugs represent serious threats for all organizations with BIG-IP deployments, as at least one of them does not require authentication before exploitation, and even the ones that do would lead to complete system compromise if they’re exploited.</p>
+
+<p>“The bottom line is that they affect all BIG-IP and BIG-IQ customers and instances—we urge all customers to update their BIG-IP and BIG-IQ deployments to the fixed versions as soon as possible,” Kara Sprague of F5 said in a <a href="https://www.f5.com/company/blog/big-ip-and-big-iq-vulnerabilities-protecting-your-organization">post</a>.</p>
+
+<p>The F5 BIG-IP appliances are powerful backend devices that are used for a number of functions, including load balancing and traffic inspection. The appliances can terminate TLS sessions and act as full proxies.</p>
+
+<p>The most serious of the four critical vulnerabilities fixed Wednesday is CVE-2021-22987, which affects several versions of BIG-IP as well as the BIG-IQ centralized management system.</p>
+
+<p>“This vulnerability allows authenticated users with network access to the Configuration utility, through the BIG-IP management port, or self IP addresses, to execute arbitrary system commands, create or delete files, or disable services. This vulnerability can only be exploited through the control plane and cannot be exploited through the data plane.” the F5 advisory says.</p>
+
+<p>“Exploitation can lead to complete system compromise and breakout of Appliance mode. Appliance mode is enforced by a specific license or may be enabled or disabled for individual vCMP guest instances.”</p>
+
+<p>One of the other critical flaws, CVE-2021-22986, does not require any authentication to exploit.</p>
+
+<p>“This vulnerability allows for unauthenticated attackers with network access to the iControl REST interface, through the BIG-IP management interface and self IP addresses, to execute arbitrary system commands, create or delete files, and disable services. This vulnerability can only be exploited through the control plane and cannot be exploited through the data plane. Exploitation can lead to complete system compromise,” the F5 advisory says.</p>
+
+<p>F5 officials said the company found some of the vulnerabilities as part of periodic internal security reviews, but some were identified by external researchers, too. One of those is CVE-2021-22992, a stack buffer overflow in BIG-IP that a researcher with Google’s Project Zero team uncovered in December.</p>
+
+<p>“The bd daemon, which runs as part of the F5 BIG-IP Application Security Manager (ASM), is vulnerable to a stack-based buffer overflow when processing overlong HTTP response headers in the ‘is_hdr_criteria_matches’ function,” the <a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=2132">Project Zero advisory</a> says.</p>
+
+<p>“While triggering the vulnerability is complex, exploiting it is trivial: The bd process has an executable stack and does not support basic exploit mitigations like PIE or stack cookies. The attached proof-of-concept demonstrates arbitrary code execution against F5 BigIP v16.01
+assuming a vulnerable ASM configuration and a compromised backend.”</p>
+
+<p>In addition to the four critical bugs, F5 also patched two high-severity and one medium-severity flaw on Wednesday.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[ThreatFox Aims to Simplify IOC Sharing]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/threatfox-aims-to-simplify-ioc-sharing</link>
+     <guid>https://duo.com/decipher/threatfox-aims-to-simplify-ioc-sharing</guid>
+          <pubDate>Wed, 10 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/fox-decipher.jpg"></p><p>Information about ongoing attacks used to be relatively hard to come by, but that's no longer the case, with security companies and researchers sharing data and indicators of compromise (IOCs) constantly in both public and private channels. The challenge is no longer finding data, but wading through all of it and separating the signal from the noise.</p>
+
+<p>A new platform is aiming to help researchers and analysts simplify that process by aggregating IOCs contributed by people across the industry and enabling users to automatically feed the data into their own SIEM platforms or other consoles. The project, known as <a href="https://threatfox.abuse.ch">ThreatFox</a>, is the work of Roman Huessy of Abuse.ch, a site that acts as a clearinghouse for data on malicious URLs and malware samples contributed by members of the security research community. Huessy’s goal is to have ThreatFox become a similar resource for SOC analysts and people on enterprise security teams who need to find potentially compromised systems quickly.</p>
+
+<p>“I wanted it to be a free, community driven platform so researchers can store their IOCs there and the output is structured for each individual system they might have,” Huessy said. “You can easily import it into your own toolset and quickly protect your customers or employees.”</p>
+
+<p>Right now, IOCs are scattered all across the internet, with some in public spots such as GitHub repositories, Twitter, or security advisories, and others in private Slack channels, customer-only reports, or subscription portals. Even for people who have access to all of those channels, staying on top of all of the new IOCs released each day, week, and month, is a brutal task. Especially in a month like March 2021, when organizations around the world are scrambling to deal with attacks on Exchange vulnerabilities, the SolarWinds compromise, as well as the everyday load of attacks. As new IOCs come out, analysts and defenders have to find the ones that are relevant to their environments, copy and paste them, and then get on with the task of hunting.</p>
+
+<blockquote>
+  <p>“There are a lot of good IOCs out there, but the issue is some are on closed platforms."</p>
+</blockquote>
+
+<p>Huessy is hoping ThreatFox will take some of the burden off defenders by giving them free access to the platform’s API. The IOCs in ThreatFox can be exported as JSON or CSV files, or MISP events, and Huessy does not limit the volume of API queries users can make. The API can be used for contributing IOCs to the database, as well.</p>
+
+<p>“There are a lot of good IOCs out there, but the issue is some are on closed platforms that you have to pay for and some you have to register for, and the issue I see is you have to reg on zillions of platforms and then pull down the feed and put them in to your own tool. It’s a bit of a mess,” Huessy said.</p>
+
+<p>To narrow down the results of queries, users can search for specific domain names, file hashes, or other data points. Huessy had the idea for Threat Fox a few months ago and began working on it in November. By December, it was mostly finished, aside from some testing and refinements. Now, he’s ready for the community to get involved and pish it forward.</p>
+
+<p>“The idea is for others to contribute, so it’s not a one-man show,” he said.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[GitHub Fixes Bug That Could Have Routed Authenticated Sessions to Other Users]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/github-fixes-bug-that-could-have-routed-authenticated-sessions-to-other-users</link>
+     <guid>https://duo.com/decipher/github-fixes-bug-that-could-have-routed-authenticated-sessions-to-other-users</guid>
+          <pubDate>Tue, 09 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/laptopusers.jpg"></p><p>GitHub on Monday said it had <a href="https://github.blog/2021-03-08-github-security-update-a-bug-related-to-handling-of-authenticated-sessions/">identified and fixed a rare vulnerability</a> in some of its backend systems that could have rerouted a user’s authenticated session to another user’s browser. The company also invalidated all user sessions that were created before about noon UTC Monday as an added precaution, and said that the issue could not have been triggered intentionally by an attacker.</p>
+
+<p>The vulnerability that caused the issue was a race condition in a request-handling process on GitHub’s backend infrastructure, and the company’s CSO, Mike Hanley, said that it existed at various times between Feb. 8 and March 5. A GitHub user had alerted the company to the issue on March 2, and the company’s security and engineering teams investigated it and eventually installed a fix for the race condition, which could have given one user the valid and authenticated session cookie for another user.</p>
+
+<p>“It is important to note that this issue was not the result of compromised account passwords, SSH keys, or personal access tokens (PATs) and there is no evidence to suggest that this was the result of a compromise of any other GitHub systems. Instead, this issue was due to the rare and isolated improper handling of authenticated sessions. Further, this issue could not be intentionally triggered or directed by a malicious user,” Hanley said in a post Monday evening.</p>
+
+<blockquote>
+  <p>"This issue could not be intentionally triggered or directed by a malicious user."</p>
+</blockquote>
+
+<p>“Out of an abundance of caution, and with a strong bias toward account security, we’ve invalidated all sessions on GitHub.com created prior to 12:03 UTC on March 8 to avoid even the remote possibility that undetected compromised sessions could still exist after the vulnerability was patched.”</p>
+
+<p>Only a small number of users were ever actually affected by the issue, and GitHub has contacted them directly.</p>
+
+<p>GitHub’s platform is used by tens of millions of developers to build hundreds of millions of software projects and is a significant part of the software supply chain in the United States and around the world. Hanley joined the company as CSO in late February and said that a top priority for him is ensuring that developers see evidence of the company’s commitment to security.</p>
+
+<p>“Making sure that we have not just an investment but a visible investment in security is so important,” Hanley said in an <a href="https://duo.com/decipher/the-whole-world-is-built-on-software">interview with Decipher</a>.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Microsoft Fixes IE 0-Day Used in Attacks on Researchers]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/microsoft-fixes-ie-0-day-used-in-attacks-on-researchers</link>
+     <guid>https://duo.com/decipher/microsoft-fixes-ie-0-day-used-in-attacks-on-researchers</guid>
+          <pubDate>Tue, 09 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/microsoftlogo.jpg"></p><p>More than a month after it was <a href="https://duo.com/decipher/microsoft-investigating-reported-ie-zero-day">disclosed</a>, Microsoft has <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26411">patched a zero day in Internet Explorer</a> that was used in a campaign that targeted security researchers in recent months.</p>
+
+<p>The flaw affects IE 11 and Microsoft Edge and allows remote code execution on all of the affected platforms, which include Windows Server, Windows 10, Windows 8.1, and Windows 7. Researchers at Enki, a Korean firm, discovered the vulnerability and published details of it in early February. The discovery came when attackers sent them an MHTML file that included exploit code for the flaw, which was unknown at the time.</p>
+
+<p>“An attacker could host a specially crafted website designed to exploit the vulnerability through Internet Explorer and then convince a user to view the website. The attacker could also take advantage of compromised websites, or websites that accept or host user-provided content or advertisements, by adding specially crafted content that could exploit the vulnerability,” Microsoft said in the patch release Tuesday.</p>
+
+<p>“However, in all cases an attacker would have no way to force a user to view the attacker-controlled content. Instead, an attacker would have to convince a user to take action, typically by an enticement in an email or instant message, or by getting the user to open an attachment sent through email.’</p>
+
+<p>The attempted attack on the Enki researchers was part of a broader campaign that went after security researchers for several months in 2020 and early 2021. The campaign was attributed to a group in North Korea and included the use of social media accounts and research blogs to help establish credibility and requests for help or research assistance to legitimate researchers.</p>
+
+<p>“After building their reputation across their established social media accounts, the actors started approaching potential targets on social media platforms such as Twitter and LinkedIn. The conversations were often seemingly innocuous, asking security questions or talking about exploit techniques. If the researcher was responsive, the actor would offer to move communication to another platform (e.g., email, Discord) in some cases to then send files using encrypted or PGP protected ZIPs,” Microsoft’s Threat Intelligence Team said in a report on the campaign on Jan. 28.</p>
+
+<p>When the IE flaw was disclosed, MIcrosoft said it was investigating the report, but did not provide any further public information until the patch release Tuesday.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Attacks on Exchange Servers Spread]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/attacks-on-exchange-servers-spread</link>
+     <guid>https://duo.com/decipher/attacks-on-exchange-servers-spread</guid>
+          <pubDate>Mon, 08 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/windowskeyboard.jpg"></p><p>As <a href="https://duo.com/decipher/exchange-attacks-hitting-broad-range-of-organizations">attacks against the four Exchange vulnerabilities</a> disclosed last week, the scope of the exploit attempts has expanded and CISA and security experts are encouraging defenders to not just apply the fixes, but search their networks for signs of previous compromise.</p>
+
+<p>When Microsoft initially disclosed the attacks targeting the Exchange flaws, it said that one specific group, which it called Hafnium, was behind the activity. The attacks began as far back as January and Microsoft said they had hit a small number of organizations. But soon after the disclosures last week, researchers quickly found that many other organizations had been compromised too, with many of the victims in industries or sectors that aren’t typically targets for APT groups. In the days that followed, it became clear that once the details of the flaws became public, Hafnium was not the only group exploiting the Exchange flaws and thousands of organizations had been compromised. The vulnerabilities are quite dangerous and exploiting them is not especially difficult, particularly the SSRF flaw (CVE-2021-26855) that attackers are using for initial access to Exchange servers.</p>
+
+<p>Over the weekend, the Cybersecurity and Infrastructure Security Agency issued an updated advisory warning that the attack activity is ongoing and widespread and urging enterprises to address the flaws in their environments right away. That includes not just applying patches, but also looking for indications that any server has been compromised. Microsoft has <a href="https://github.com/microsoft/CSS-Exchange/tree/main/Security">released a tool</a> that will test Exchange servers for those indicators automatically.</p>
+
+<p>“CISA is aware of widespread domestic and international exploitation of these vulnerabilities and strongly recommends organizations run the Test-ProxyLogon.ps1 script—as soon as possible—to help determine whether their systems are compromised,” CISA said in its <a href="https://us-cert.cisa.gov/ncas/alerts/aa21-062a">advisory</a>.</p>
+
+<p>“CISA is aware of threat actors using open source tools to search for vulnerable Microsoft Exchange Servers. This particular type of attack is scriptable, allowing attackers to easily exploit vulnerabilities through automated mechanisms.”</p>
+
+<p>The vulnerabilities affect a subset of Exchange servers deployed on premises, and do not affect cloud-based deployments such as Office 365. Although on-premise Exchange is less popular than it was even just a few years ago thanks to the migration to the cloud, there are still thousands of Exchange servers online, and attackers are taking advantage of the fact that many enterprises cannot just take their Exchange servers offline on a moment’s notice to patch. Email is at the heart of how many organizations operate and downtime for those servers usually is planned well in advance. With details of the vulnerabilities having been public for more than a week now, many different kinds of adversaries have had the chance to study them and develop the tools needed to exploit them. Having multiple type of adversaries exploiting the vulnerabilities adds to the urgency to patch, but it doesn’t make that process any easier.</p>
+
+<p>For organizations that have not had the chance to install the patches, Microsoft has published an <a href="https://msrc-blog.microsoft.com/2021/03/05/microsoft-exchange-server-vulnerabilities-mitigations-march-2021/">extensive set of mitigations</a> that can alleviate the effects of the vulnerabilities, but they are not permanent solutions. Some of the mitigations will take various Exchange services offline, however, and they should not be considered replacements for patching.</p>
+
+<p>“These mitigations are not a remediation if your Exchange servers have already been compromised, nor are they full protection against attack. We strongly recommend investigating your Exchange deployments using the hunting recommendations here to ensure that they have not been compromised. We recommend initiating an investigation in parallel with or after applying one of the following mitigation strategies,” Microsoft’s advisory says.</p>
+
+<p>The mitigations include implementing IIS rewrite rules that will filter out HTTPS requests that are used to exploit the SSRF flaw, disabling the UM service, and disabling the Exchange Control Panel.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA['The Whole World is Built on Software']]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/the-whole-world-is-built-on-software</link>
+     <guid>https://duo.com/decipher/the-whole-world-is-built-on-software</guid>
+          <pubDate>Thu, 04 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/github-decipher.jpg"></p><p>Securing one software project is a difficult task. Now, consider the job of helping millions of developers in thousands of organizations write more secure code, eliminate exploitable vulnerabilities, and find dependencies in their software supply chains and you begin to get a sense of the challenge that Mike Hanley has taken on as the new CSO at GitHub.</p>
+
+<p>In a world that’s built on and run by software, it’s no stretch to say that the tools and systems used to develop and deliver all of those applications should now be considered part of the country’s critical infrastructure, too, and treated as such. Finding examples of why this is so is not difficult, with the most prominent one being the continued fallout from the intrusion at SolarWinds and subsequent downstream effects on thousands of customers. While that incident was a deliberate attack by a foreign adversary that deliberately inserted a backdoor into a software update, unintentional errors and oversights can have the same kind of cascading effects.</p>
+
+<p>“When you think about the fact that most software is composed of open source software, getting it right for us is super important. Making sure that we have not just an investment but a visible investment in security is so important,” said Hanley, who joined GitHub last week from Cisco, where he was the CISO.</p>
+
+<p>“And when you look at a platform like ours that has millions of developers on it every day, it’s critical that we do the work to help make sure they’re not shipping vulnerable code. There are so many developers that are running these projects that are not necessarily going to be security experts, and they shouldn’t have to be. The point is for them to be experts at what they do best. That’s where the real opportunity happens for us.”</p>
+
+<p>To support that goal of making security more accessible for developers, GitHub has added a number of features and tools recently. In 2019 the company <a href="https://duo.com/decipher/github-brings-automated-fixes-with-dependabot">acquired Dependabot</a>, a tool that allows the platform to monitor dependencies in projects for known vulnerabilities and then automatically open pull requests to ensure the project has the newest version. Last year, GitHub introduced a <a href="https://duo.com/decipher/github-releases-integrated-code-scanning-feature">feature that automatically scans repositories</a> for vulnerabilities, taking some of the pressure off developers to stay on top of newly disclosed flaws in libraries and other components they use. A related feature will scan repositories for secrets, such as credentials, left in the code and alert developers.</p>
+
+<blockquote>
+  <p>"This is such an important moment. The whole world is built on software.”</p>
+</blockquote>
+
+<p>Changes like those can have a major effect on the security of the software built on GitHub, and Hanley said the ability to have that kind of broad influence on the software ecosystem was  important for him.</p>
+
+<p>“A huge motivation for me was the ability to protect the platform, but it’s also the best point of leverage to raise the tide for everyone,” he said. “GitHub has such a unique leverage point. Something like secret scanning can fundamentally limit the number of people who make those simple mistakes. If you get a very complex set of tools that assumes a lot of security expertise, that’s where you can get in trouble. This is where thoughtful design and enabling the developer community to do its work is important.”
+As much of a difference as those changes can make for developers, the software ecosystem is vast and deep and no one entity has visibility into all of it. Sharing security knowledge, threat intelligence, and best practices is a vital part of securing networks and software projects alike. Hanley, who spent several years at CERT, said he sees room for more cooperation between the private and public sectors on a range of initiatives, including standards and development practices.</p>
+
+<p>“We need to look for more opportunities for collaboration. Things like NIST standards help set the bar and accelerate adoption of something like zero trust, for example. The government was on time on that one,” he said.</p>
+
+<p>“There are opportunities there around software security and secure development practices. We can iterate on things like vulnerability management. There’s more to it than just vulnerabilities that exist in code. This is such an important moment. The whole world is built on software.”</p>
+
+<p><em><a href="https://creativecommons.org/licenses/by/2.0/">CC-By 2.0 license</a> photo from Flickr.</em></p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Exchange Attacks Hitting Broad Range of Organizations]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/exchange-attacks-hitting-broad-range-of-organizations</link>
+     <guid>https://duo.com/decipher/exchange-attacks-hitting-broad-range-of-organizations</guid>
+          <pubDate>Wed, 03 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/microsoftlogo.jpg"></p><p>The exploit attempts targeting the <a href="https://duo.com/decipher/hafnium-attack-group-exploiting-four-exchange-zero-days">four zero days in Exchange</a> disclosed yesterday have already become more widespread than originally reported, with small businesses being hit along with government agencies, financial institutions, and health care providers.</p>
+
+<p>In its <a href="https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/">disclosure of the vulnerabilities</a>, Microsoft said that the flaws were being used in “limited and targeted attacks” by an APT group based in China called Hafnium. The vulnerabilities are quite serious, with one of them allowing remote access to an Exchange server without any authentication or other special information. Microsoft said Hafnium had used the vulnerabilities to target on-premise Exchange servers, install a webshell as a persistence mechanism, and steal confidential information from victims’ inboxes. Since the disclosures Tuesday, researchers have been tracking exploit activity against a variety of organizations, not all of which fall into the bucket of typical APT targets.</p>
+
+<p>Researchers at Huntress Labs, which works with managed service providers to find threats, has identified nearly 200 Exchange servers that have a webshell payload that is the telltale sign of the attacks on these vulnerabilities. In some cases, vulnerable servers have been found with multiple webshells installed, potentially indicating exploitation by more than one attacker. MIcrosoft researchers emphasized the seriousness of the flaws and urged customers to install the patches for the four bugs as soon as possible. But for organizations that aren’t usually targeted by high-level attackers, the warnings may not have been enough.</p>
+
+<p>“Because the advisory said limited and targeted attacks, it seems like some people shrugged it off. We’re seeing it as a much bigger set of activity,” said John Hammond, senior security researcher at Huntress Labs.</p>
+
+<p>“It’s evident now that it’s public knowledge and we’re all playing catch-up. We’re seeing activity across the board, from small businesses like ice cream shops, all the way up to government agencies and banking.”</p>
+
+<p>The four Exchange vulnerabilities Microsoft disclosed have been chained together by the Hafnium group to gain initial access to vulnerable servers, maintain persistence, and then steal data, including the contents of individual inboxes. The most serious of the four is CVE-2021-26855, a server-side request forgery flaw that the attackers have used for initial access. Researchers at Volexity first detected exploitation of that flaw in January and then subsequently saw the same actor using other Exchange zero days in its operations.</p>
+
+<p>“During the course of multiple incident response efforts, Volexity identified that the attacker had managed to chain the SSRF vulnerability with another that allows remote code execution (RCE) on the targeted Exchange servers (CVE-2021-27065). In all cases of RCE, Volexity has observed the attacker writing webshells (ASPX files) to disk and conducting further operations to dump credentials, add user accounts, steal copies of the Active Directory database (NTDS.DIT), and move laterally to other systems and environments,” an <a href="https://www.volexity.com/blog/2021/03/02/active-exploitation-of-microsoft-exchange-zero-day-vulnerabilities/">analysis of the attacks</a> by Volexity says.</p>
+
+<p>Hammond said that not all of the webshells Huntress has seen are identical, and the naming conventions don’t all line up with the one used by Hafnium. Now that the details of the vulnerabilities are public, it’s likely that other actors outside of APT groups will begin targeting them, as well.</p>
+
+<p>“I don’t think everyone is taking this as seriously as they should. I think we should be screaming this one from the rooftops,” Hammond said. “Every organization has to have email and Exchange is so widely deployed and you get command and control inherently when you exploit this.”</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Hafnium Attack Group Exploiting Four Exchange Zero Days]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/hafnium-attack-group-exploiting-four-exchange-zero-days</link>
+     <guid>https://duo.com/decipher/hafnium-attack-group-exploiting-four-exchange-zero-days</guid>
+          <pubDate>Tue, 02 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/chinamap.jpg"></p><p>A Chinese attack group that is known to target organizations in several industries in the U.S. has been using <a href="https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/">four separate zero-day vulnerabilities in Microsoft Exchange</a> to gain access to target servers and then steal the contents of users’ inboxes. Microsoft has released <a href="https://msrc-blog.microsoft.com/2021/03/02/multiple-security-updates-released-for-exchange-server/">out-of-band updates for the flaws</a> Tuesday and is urging customers to apply the patches as quickly as possible.</p>
+
+<p>The most dangerous of the vulnerabilities is a server-side request forgery (SSRF) bug that researchers at Volexity caught being exploited against two of its customers in January. That bug does not require any authentication and the attackers, which Microsoft refers to as Hafnium, were using it to gain access to Exchange server and then exfiltrate data from users’ inboxes.</p>
+
+<p>“Through its analysis of system memory, Volexity determined the attacker was exploiting a zero-day server-side request forgery (SSRF) vulnerability in Microsoft Exchange (CVE-2021-26855). The attacker was using the vulnerability to steal the full contents of several user mailboxes. This vulnerability is remotely exploitable and does not require authentication of any kind, nor does it require any special knowledge or access to a target environment. The attacker only needs to know the server running Exchange and what account from which they want to extract e-mail,” Volexity researchers said in a <a href="https://www.volexity.com/blog/2021/03/02/active-exploitation-of-microsoft-exchange-zero-day-vulnerabilities/">post</a>.</p>
+
+<p>Once the attackers had exploited this bug for initial access, they would install a webshell on the compromised Exchange server to enable persistence. Hafnium was also using three other previously unknown flaws in Exchange for further operations on servers. Two of the bugs are arbitrary file-write vulnerabilities that enabled the attackers to write any file to any path on the server. Both of those flaws require authentication. The third flaw allowed the attackers to run code as System on the server. Taken together, the four zero days represent a powerful set of tools for accessing and taking control of enterprise mail servers.</p>
+
+<p>Hafnium is a newly identified attack group, and Microsoft researchers said the group typically goes after organizations in verticals such as defense, infectious disease research, law, education, and think tanks. The group runs its operations through leased virtual private servers in the U.S., but is based in China, Microsoft said. Though Hafnium is the only group known to have exploited these bugs, that likely won’t be the case for long now that some details are public.</p>
+
+<blockquote>
+  <p>"We know that many nation-state actors and criminal groups will move quickly to take advantage of any unpatched systems."</p>
+</blockquote>
+
+<p>“Even though we’ve worked quickly to deploy an update for the Hafnium exploits, we know that many nation-state actors and criminal groups will move quickly to take advantage of any unpatched systems. Promptly applying today’s patches is the best protection against this attack,” Tom Burt, corporate vice president of customer security and trust at Microsoft, <a href="https://blogs.microsoft.com/on-the-issues/2021/03/02/new-nation-state-cyberattacks/">said</a>.</p>
+
+<p>The Volexity researchers said the amount of initial information needed to exploit the SSRF vulnerability is quite low.</p>
+
+<p>“In order to exploit this vulnerability, the attacker must also identify the fully qualified domain name (FQDN) of the internal Exchange server(s). Using a series of requests, Volexity determined that this information could be extracted by an attacker with only initial knowledge of the external IP address or domain name of a publicly accessible Exchange server. After this information is obtained, the attacker can generate and send a specially crafted HTTP POST request to the Exchange server with an XML SOAP payload to the Exchange Web Services (EWS) API endpoint,” the researchers said.</p>
+
+<p>“This SOAP request, using specially crafted cookies, bypasses authentication and ultimately executes the underlying request specified in the XML, allowing an attacker to perform any operation on the users’ mailbox.”</p>
+
+<p>Microsoft's Burt emphasized that the newly disclosed flaws were not connected to the SolarWinds intrusion, which also targeted Microsoft's internal network.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[ObliqueRAT Delivered Via Rigged Image Files]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/obliquerat-delivered-via-rigged-image-files</link>
+     <guid>https://duo.com/decipher/obliquerat-delivered-via-rigged-image-files</guid>
+          <pubDate>Tue, 02 Mar 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/camera.jpg"></p><p>A new campaign pushing updated versions of the ObliqueRAT malware is using several new techniques to avoid detections, including hiding the malicious payload inside images hosted on compromised websites.</p>
+
+<p>ObliqueRAT first surfaced about a year ago when researchers with Cisco’s Talos Intelligence Group discovered the malware and found that it shared some similarities with the CrimsonRAT. The two families had some overlap with the macros that they used and also employed similar malicious documents as part of the infection chain. In the past, the ObliqueRAT malware has been delivered through malicious Office documents that drop the payload directly onto victims’ machines. But the new campaign, which Talos researchers discovered recently, uses unique macros and no longer delivers the payload directly from the malicious documents, but rather from compromised sites.</p>
+
+<p>The payload itself is buried within bitmap images files that look harmless. The malicious macros embedded in the Office documents used in this campaign download the images and then extract the payload and save it to disk.</p>
+
+<p>“Another instance of a maldoc uses a similar technique with the difference being that the payload hosted on the compromised website is a BMP image containing a ZIP file that contains ObliqueRAT payload. The malicious macros are responsible for extracting the ZIP and subsequently the ObliqueRAT payload on the endpoint,” Asheer Malhotra said in a <a href="https://blog.talosintelligence.com/2021/02/obliquerat-new-campaign.html?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+feedburner%2FTalos+%28Talos™+Blog%29">post detailing the new campaign</a>.</p>
+
+<p>“The macros are also responsible for achieving reboot persistence for the ObliqueRAT payloads. This is done by creating a shortcut (.url file extension) in the infected user's Startup directory.”</p>
+
+<p>The campaign that’s employing the new techniques is targeting organizations in South Asia and there are several new versions of ObliqueRAT in use. All of the new versions were developed in 2020 and they include new capabilities, notably a pair of checks to see whether the malware is running in a virtual machine or on a computer that is included in a blocklist. Newer versions also include an expanded set of capabilities for stealing specific file types, as well the ability to record webcam video and take desktop screenshots.</p>
+
+<p>“This campaign shows a threat actor evolving their infection techniques so that they no longer resemble those used previously. It is highly likely that these changes are in response to previous disclosures to achieve evasion for these new campaigns. The usage of compromised websites is another attempt at detection evasion,” Malhotra said.</p>
+
+<p>In addition to the possible connection with the CrimsonRAT malware campaigns, Talos also discovered some overlap of the command-and-control infrastructure used by ObliqueRAT and an operation that installed a separate piece of malware, RevengeRAT. The code for RevengeRAT is freely available online, so tying it to a specific operator is tough. Malhotra said Talos researchers had low confidence that there’s a connection between the two operations, despite the C2 overlap.</p>
+]]>
+            </description>
+     </item>
+       <item>
+     <title><![CDATA[Attackers Continue to Target Accellion FTA Flaws]]></title>
+     <author>
+       dennis@decipher.sc (Dennis Fisher)
+     </author>
+     <link>https://duo.com/decipher/attackers-continue-to-target-accellion-fta-flaws</link>
+     <guid>https://duo.com/decipher/attackers-continue-to-target-accellion-fta-flaws</guid>
+          <pubDate>Fri, 26 Feb 2021 00:00:00 -0500</pubDate>
+     <description>
+              <![CDATA[<p><img src="https://duo.com/assets/img/seo-images/shattered-window-decipher.jpg"></p><p>Three weeks after Accellion issued patches for four vulnerabilities in its File Transfer Appliance that were under active attack, <a href="https://us-cert.cisa.gov/ncas/alerts/aa21-055a">CISA is warning</a> that attackers are continuing to exploit the flaws to install webshells and steal data from organizations that have not updated their systems.</p>
+
+<p>The attacks have affected companies and government agencies in several countries, including the United States, New Zealand, Singapore, and Australia, and in some instances the adversaries exploiting the bugs have threatened to release information stolen from the victims unless the organizations pay a ransom. These incidents did not involve ransomware, but were simple extortion attempts. The attacks against the vulnerabilities in Accellion FTA have been ongoing since at least mid-December, when researchers first noticed the activity and realized the attackers were exploiting previously unknown flaws. The main method of compromise for these attackers is a SQL injection vulnerability (CVE-2021-27101) in the FTA. After the initial access, the attackers eventually write a webshell to oauth.api.</p>
+
+<p>“In mid-December 2020, Mandiant responded to multiple incidents in which a web shell we call DEWMODE was used to exfiltrate data from Accellion FTA devices. The Accellion FTA device is a purpose-built application designed to allow an enterprise to securely transfer large files. The exfiltration activity has affected entities in a wide range of sectors and countries,” an <a href="https://www.fireeye.com/blog/threat-research/2021/02/accellion-fta-exploited-for-data-theft-and-extortion.html">analysis of the attacks by Mandiant</a> says.</p>
+
+<p>“Across these incidents, Mandiant observed common infrastructure usage and TTPs, including exploitation of FTA devices to deploy the DEWMODE web shell. Mandiant determined that a common threat actor we now track as UNC2546 was responsible for this activity. While complete details of the vulnerabilities leveraged to install DEWMODE are still being analyzed, evidence from multiple client investigations has shown multiple commonalities in UNC2546's activities.”</p>
+
+<blockquote>
+  <p>"The webshell allows the attacker to send commands to targeted devices, exfiltrate data, and clean up logs."</p>
+</blockquote>
+
+<p>The Accellion FTA is an older file-transfer product that is nearing end of life. After Mandiant notified Accellion of the attacks, the company released a patch a few days later.</p>
+
+<p>“In mid-December, Accellion was made aware of a zero-day vulnerability in its legacy FTA software. Accellion released a fix within 72 hours. This initial incident was the beginning of a concerted cyberattack on the Accellion FTA product that continued into January 2021. Accellion identified additional exploits in the ensuing weeks and rapidly developed and released patches to close each vulnerability. Accellion continues to work closely with FTA customers to mitigate the impact of the attack and to monitor for anomalies,” Accellion said in an <a href="https://www.accellion.com/company/press-releases/accellion-provides-update-to-recent-fta-security-incident/">advisory</a>.</p>
+
+<p>The three additional vulnerabilities the company discovered include two command execution flaws in the operating system and a server-side request forgery flaw. In its advisory issued Wednesday, the Cybersecurity and Infrastructure Security Agency (CISA) said it had seen two separate incidents in which attackers transferred large amounts of data from compromised Accellion FTA machines in federal agencies over port 443.</p>
+
+<p>“One of the exploited vulnerabilities (CVE-2021-27101) is an SQL injection vulnerability that allows an unauthenticated user to run remote commands on targeted devices. Actors have exploited this vulnerability to deploy a webshell on compromised systems. The webshell allows the attacker to send commands to targeted devices, exfiltrate data, and clean up logs. The clean-up functionality of the webshell helps evade detection and analysis during post incident response,” CISA’s advisory says.</p>
+]]>
+            </description>
+     </item>
+
+</channel>
+
+</rss>

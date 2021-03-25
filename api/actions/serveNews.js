@@ -6,6 +6,7 @@ const {
   getNews: getSecureXTrainingNews,
 } = require("../../dataSources/securex-training");
 const { getNews: getLocalNews } = require("../../dataSources/contentful");
+const { getNews: getDuoNews } = require("../../dataSources/duo");
 
 async function serveNews(req, res, next) {
   let [
@@ -14,20 +15,23 @@ async function serveNews(req, res, next) {
     ciscoBlogNews,
     secureXTrainingNews,
     localNews,
+    duoNews,
   ] = await Promise.all([
     getTalosNews(),
     getUSCertNews(),
     getCiscoBlogNews(),
     getSecureXTrainingNews(),
     getLocalNews(),
+    getDuoNews(),
   ]);
 
   const news = [
-    ...talosNews.items,
-    ...usCertNews.items,
-    ...ciscoBlogNews.items,
-    ...secureXTrainingNews.items,
-    ...localNews.items,
+    ...(talosNews.items || []),
+    ...(usCertNews.items || []),
+    ...(ciscoBlogNews.items || []),
+    ...(secureXTrainingNews.items || []),
+    ...(localNews.items || []),
+    ...(duoNews.items || []),
   ]
     .sort(
       (
@@ -59,11 +63,12 @@ async function serveNews(req, res, next) {
 
   const newsSources = [...new Set(news.map((x) => x.sourceId))];
   const sources = {
-    ...talosNews.sources,
-    ...usCertNews.sources,
-    ...ciscoBlogNews.sources,
-    ...secureXTrainingNews.sources,
-    ...localNews.sources,
+    ...(talosNews.sources || {}),
+    ...(usCertNews.sources || {}),
+    ...(ciscoBlogNews.sources || {}),
+    ...(secureXTrainingNews.sources || {}),
+    ...(localNews.sources || {}),
+    ...(duoNews.sources || {}),
   };
 
   Object.keys(sources).forEach((x) => {

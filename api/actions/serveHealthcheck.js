@@ -65,6 +65,13 @@ const healthchecks = {
       throw new Error("response status: " + response.status);
     }
   },
+  "https://duo.com/": async () => {
+    const response = await fetch(new URL("https://duo.com/decipher/feed"));
+
+    if (!response.ok) {
+      throw new Error("response status: " + response.status);
+    }
+  },
 };
 
 async function runHealthchecks() {
