@@ -36,6 +36,10 @@ const healthchecks = {
   },
   "https://learningnetwork.cisco.com/": async () => {
     const page = await fetch("https://learningnetwork.cisco.com/s/event-list");
+    if (!page.ok) {
+      throw new Error("response status: " + response.status);
+    }
+
     const pageHtml = await page.text();
     const key = pageHtml.match(
       /\/s\/sfsites\/auraFW\/javascript\/([^\/]+)\/aura_prod/
