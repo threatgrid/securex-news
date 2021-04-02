@@ -1,4 +1,4 @@
-const createServer = require("./api/createServer.js");
+const createServer = require("./createServer.js");
 
 const server = createServer();
 const port = process.env.PORT || "8080";
