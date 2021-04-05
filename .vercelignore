@@ -1,0 +1,8 @@
+.travis.yml
+codecov.yml
+README.md
+
+.github/
+.nyc_output/
+coverage/
+tests/

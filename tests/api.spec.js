@@ -27,7 +27,7 @@ const mockCiscoBlogFixture = require("./fixtures/cisco-blog/response.json");
 const mockSecureXTrainingFixture = require("./fixtures/securex-training/response.json");
 const mockSecureXCmsFixture = require("./fixtures/contentful/response.json");
 const mockDuoFixture = require("./fixtures/duo/response.json");
-const handler = require("../index.js");
+const handler = require("../api/index.js");
 const { response } = require("express");
 
 const mockParseURLTalos = jest.fn().mockImplementation(() => mockTalosFixture);
