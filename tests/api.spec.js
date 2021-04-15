@@ -66,8 +66,8 @@ describe("news service", () => {
       .expect(200)
       .expect((res) => {
         const result = JSON.parse(res.text, { compact: true, spaces: 0 });
-        expect(result.items.length).toBe(10);
-        expect(Object.keys(result.sources).length).toBe(3);
+        expect(result.items.length).toBe(25);
+        expect(Object.keys(result.sources).length).toBe(5);
       });
 
     expect(mockParseURLTalos).toHaveBeenCalledTimes(1);
