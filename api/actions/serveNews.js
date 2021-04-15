@@ -55,7 +55,7 @@ async function serveNews(req, res, next) {
         return a > b ? -1 : a < b ? 1 : 0;
       }
     )
-    .slice(0, 10)
+    .slice(0, 25)
     .map((x) => {
       delete x.highlight;
       return x;
