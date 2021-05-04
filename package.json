@@ -16,7 +16,7 @@
     "rss-parser": "3.12.0"
   },
   "devDependencies": {
-    "codecov": "3.8.1",
+    "codecov": "3.8.2",
     "eslint": "7.25.0",
     "eslint-config-standard": "16.0.2",
     "eslint-plugin-import": "2.22.1",
